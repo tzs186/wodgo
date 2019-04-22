@@ -11,6 +11,7 @@
     data(){
       return{
         speed:"1",
+        indexId:"2",
         listImg:[
           {url:require("../../assets/img/banner1.jpg")},
           {url:require("../../assets/img/banner2.jpg")},
