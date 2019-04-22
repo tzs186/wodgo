@@ -16,6 +16,7 @@
           {url:require("../../assets/img/banner2.jpg")},
           {url:require("../../assets/img/banner1.jpg")},
           {url:require("../../assets/img/banner2.jpg")},
+          {url:require("../../assets/img/banner1.jpg")},
 
           ]
       }
