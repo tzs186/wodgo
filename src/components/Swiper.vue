@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container">
+  <div class="swiper-container" :class="setClass">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="str in listImg">
         <img :src="str.url" alt="">
@@ -7,8 +7,6 @@
     </div>
     <div class="swiper-pagination swiper-pagination-white"></div>
   </div>
-
-
 </template>
 
 <script>
@@ -25,21 +23,31 @@
       listImg:{
         type:Array,
         default: []
+      },
+      opc:{
+        type:Object,
+        default:{}
+      },
+      setClass:{
+        type:String,
+        default:"swiper-container"
       }
     },
     mounted() {
       var that=this;
-      var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        loop: true,
+      var swiper = new Swiper("."+that.setClass,that.sql);
+    },
+    computed:{
+      sql () {
+        return this.opc
+      }
+    },
+    watch: {
+      sql:(newVal,oldVal) => {
+        console.log(newVal);
+        this.sql =newVal;
 
-        speed: 4000,
-        autoplay: true,
-        onTouchEnd: function () {
-          swiper.startAutoplay()
-        }
-      });
+      }
     }
   }
 </script>
@@ -47,19 +55,16 @@
 <style scoped lang="less">
   .swiper-container {
     width: 100%;
-    height: 500px;
-
+    /*height: 500px;*/
     .swiper-wrapper {
       width: 100%;
       height: 100%;
     }
-
     .swiper-slide {
       background-position: center;
       background-size: cover;
       width: 100%;
       height: 100%;
-
       img {
         width: 100%;
         height: 100%;

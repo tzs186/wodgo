@@ -1,18 +1,18 @@
 import axios from 'axios'
 import store from '@/store/index.js'
 
-import {Message} from 'element-ui'
+
 
 const http = {}
 
 const instance = axios.create({
+  baseURL:process.env.NODE_ENV === 'development' ? '/api' : 'http://101.207.139.80/gatemgr/',
   timeout: 5000,
-
 });
 
 //添加请求拦截器
 instance.interceptors.request.use(function (config) {
-  if (store.state.UserToken) {
+   if (store.state.UserToken) {
     config.headers.Authorization = store.state.UserToken
   }
   return config
@@ -30,13 +30,13 @@ instance.interceptors.response.use(res=>{
         err.message = '请求出错'
         break
       case 401:
-        Message.warning({
+        /*Message.warning({
           message: '授权失败，请重新登录'
         })
         store.commit('LOGIN_OUT')
         setTimeout(() => {
           window.location.reload()
-        }, 1000)
+        }, 1000)*/
 
         return
       case 403:
@@ -52,9 +52,9 @@ instance.interceptors.response.use(res=>{
   } else {
     err.message = '连接服务器失败'
   }
-  Message.error({
+/*  Message.error({
     message: err.message
-  })
+  })*/
   return Promise.reject(err.response)
 })
 
@@ -63,12 +63,12 @@ http.get = function(url, options) {
     instance
       .get(url, options)
       .then(response => {
-        if (response.code === 0) {
+        if (response.code === 200) {
           resolve(response.data)
         } else {
-          Message.error({
+         /* Message.error({
             message: response.message
-          })
+          })*/
           reject(response.message)
         }
       })
@@ -83,12 +83,12 @@ http.post = function(url, data, options) {
     instance
       .post(url, data, options)
       .then(response => {
-        if (response.code === 0) {
+        if (response.code === 200) {
           resolve(response.data)
         } else {
-          Message.error({
+          /*Message.error({
             message: response.message
-          })
+          })*/
           reject(response.message)
         }
       })

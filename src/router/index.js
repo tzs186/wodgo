@@ -5,6 +5,8 @@ import HelloWorld from '@/components/HelloWorld'
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass: '',
+  linkExactActiveClass: 'active',
   routes: [
     {
       path: '/',

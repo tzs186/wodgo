@@ -8,8 +8,9 @@ import 'lib-flexible'
 import 'font-awesome/css/font-awesome.css'
 import "@/styles/common.less";
 Vue.config.productionTip = false;
-import axios from "axios"
-Vue.prototype.$http= axios;
+
+import request from '@/config/httpConfig'
+Vue.prototype.$axios = request;
 /* eslint-disable no-new */
 
 /*router.beforeEach((to,from,next)=>{

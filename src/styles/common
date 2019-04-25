@@ -1,9 +1,25 @@
 @charset "utf-8";
-body, h1, h2, h3, h4, h5, div, p, section, header, footer, ul, li, table, ol, dl, dd, dt {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p,
+section,
+header,
+footer,
+ul,
+li,
+table,
+ol,
+dl,
+dd,
+dt {
   margin: 0;
   padding: 0;
 }
-
 *,
 *:after,
 *:before {
@@ -11,7 +27,6 @@ body, h1, h2, h3, h4, h5, div, p, section, header, footer, ul, li, table, ol, dl
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
 body {
   font-size: 12px;
   font-family: "microsoft yahei";
@@ -20,17 +35,25 @@ body {
   max-width: 750px;
   margin: 0 auto;
 }
-body, html {
+body,
+html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: normal;
 }
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
-i, em, u {
+i,
+em,
+u {
   font-style: normal;
   text-decoration: none;
 }
@@ -58,18 +81,39 @@ button {
   outline: none;
   font-family: "microsoft yahei";
 }
-.font-size10{font-size: 10px;}
-.font-size11{font-size: 11px;}
-.font-size12{font-size: 12px;}
-.font-size13{font-size: 13px;}
-.font-size14{font-size: 14px;}
-.font-size15{font-size: 15px;}
-.font-size16{font-size: 16px;}
-.font-size17{font-size: 17px;}
-.font-size18{font-size: 18px;}
-.font-size19{font-size: 19px;}
-
-.padding2{padding: 0.2rem;}
+.font-size10 {
+  font-size: 10px;
+}
+.font-size11 {
+  font-size: 11px;
+}
+.font-size12 {
+  font-size: 12px;
+}
+.font-size13 {
+  font-size: 13px;
+}
+.font-size14 {
+  font-size: 14px;
+}
+.font-size15 {
+  font-size: 15px;
+}
+.font-size16 {
+  font-size: 16px;
+}
+.font-size17 {
+  font-size: 17px;
+}
+.font-size18 {
+  font-size: 18px;
+}
+.font-size19 {
+  font-size: 19px;
+}
+.padding2 {
+  padding: 0.2rem;
+}
 .padding-left {
   padding-left: 0.2rem;
 }
@@ -100,10 +144,18 @@ button {
 .margin-top1 {
   margin-top: 0.1rem;
 }
-.marginauto{margin:  0 auto;}
-.margin-none{margin: 0!important;}
-.posrel{position: relative}
-.posabs{position: absolute}
+.marginauto {
+  margin: 0 auto;
+}
+.margin-none {
+  margin: 0!important;
+}
+.posrel {
+  position: relative;
+}
+.posabs {
+  position: absolute;
+}
 .fl {
   float: left;
 }
@@ -123,61 +175,133 @@ button {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.disblock{display: block;}
-.dishide{display: none;}
+.disblock {
+  display: block;
+}
+.dishide {
+  display: none;
+}
 .xs-padding {
   padding: 0.2em;
 }
 .col-5-1 {
-  float:left;width:20%;
+  float: left;
+  width: 20%;
 }
 .col-4-1 {
-  float:left;width:25%;
+  float: left;
+  width: 25%;
 }
 .col-3-1 {
-  float:left;width:33%;
+  float: left;
+  width: 33%;
 }
 .col-2-1 {
-  float:left;width:50%;
+  float: left;
+  width: 50%;
 }
-.w10{width: 10%;}
-.w20{width: 20%;}
-.w25{width: 25%;}
-.w30{width: 30%;}
-.w40{width: 40%;}
-.w50{width: 50%;}
-.w60{width: 60%;}
-.w70{width: 70%;}
-.w80{width: 80%;}
+.w10 {
+  width: 10%;
+}
+.w20 {
+  width: 20%;
+}
+.w25 {
+  width: 25%;
+}
+.w30 {
+  width: 30%;
+}
+.w40 {
+  width: 40%;
+}
+.w50 {
+  width: 50%;
+}
+.w60 {
+  width: 60%;
+}
+.w70 {
+  width: 70%;
+}
+.w80 {
+  width: 80%;
+}
 .border {
-  border:1px solid;
+  border: 1px solid;
 }
-.text-left {text-align: left;}
-.text-right {text-align: right;}
-.text-center {text-align: center;}
-.font-weight6{font-weight: 600}
-.font-weight5{font-weight: 500}
-.font-weight4{font-weight: 400}
-.font-weight2{font-weight: 200}
-.border-radius3{border-radius: 3px}
-.bg-tran{background: transparent!important;}
-.bg-gray{background: #f7f7f7!important;}
-.bg-fff{background: #fff!important;}
-.bg-d5d5d5{background: #d5d5d5!important;}
-.bg-f4f4f4{background: #f4f4f4!important;}
-.bg-db3822{background: #db3822!important;}
-.bg-ff9600{background: #ff9600!important;}
-.bg-de3c22{background: #de3c22!important;}
-.colred{color: #f03c3c!important;}
-.coldb3822{color: #FF0000!important;}
-.col808080{color: #808080!important;}
-.col333{color: #333!important;}
-.col999{color: #999!important;}
-.colfff{color: #fff!important;}
-.colb5b5b5{color: #b5b5b5!important;}
-.border-none{border: none;}
-
-
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.font-weight6 {
+  font-weight: 600;
+}
+.font-weight5 {
+  font-weight: 500;
+}
+.font-weight4 {
+  font-weight: 400;
+}
+.font-weight2 {
+  font-weight: 200;
+}
+.border-radius3 {
+  border-radius: 3px;
+}
+.bg-tran {
+  background: transparent!important;
+}
+.bg-gray {
+  background: #f7f7f7 !important;
+}
+.bg-fff {
+  background: #fff !important;
+}
+.bg-d5d5d5 {
+  background: #d5d5d5 !important;
+}
+.bg-f4f4f4 {
+  background: #f4f4f4 !important;
+}
+.bg-db3822 {
+  background: #db3822 !important;
+}
+.bg-ff9600 {
+  background: #ff9600 !important;
+}
+.bg-de3c22 {
+  background: #de3c22 !important;
+}
+.colred {
+  color: #f03c3c !important;
+}
+.coldb3822 {
+  color: #FF0000 !important;
+}
+.col808080 {
+  color: #808080 !important;
+}
+.col333 {
+  color: #333 !important;
+}
+.col999 {
+  color: #999 !important;
+}
+.colfff {
+  color: #fff !important;
+}
+.colb5b5b5 {
+  color: #b5b5b5 !important;
+}
+.border-none {
+  border: none;
+}
 .ui-flex {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -185,15 +309,14 @@ button {
   display: flex !important;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 .ui-flex.justify-center {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
 }
-
 .ui-flex.center {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -202,9 +325,9 @@ button {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
 }
-.flex1{
+.flex1 {
   display: block;
   width: 100%;
   -webkit-box-flex: 1;
@@ -217,14 +340,13 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.text-elli-2{
+.text-elli-2 {
   word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
 }
 .badge {
   display: inline-block;
