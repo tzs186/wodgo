@@ -4,18 +4,18 @@
       <img src="../assets/img/footer_1.png" class="footer-img" alt="">
       <p>首页</p>
     </router-link>
-    <router-link class="footer-col" :to="{path: 'item' , query: 2}">
+    <router-link class="footer-col" to="/classify">
       <img src="../assets/img/footer_3.png" class="footer-img" alt="">
       <p>分类</p>
     </router-link>
     <router-link class="footer-col" :to="{path: 'item', query: 1}">
       <img src="../assets/img/Invite_1.png" class="footer-imgInvite" alt="">
     </router-link>
-    <router-link class="footer-col" :to="{path: 'item', query: 3}">
+    <router-link class="footer-col" to="/cart">
       <img src="../assets/img/footer_2.png" class="footer-img" alt="">
       <p>购物车</p>
     </router-link>
-    <router-link class="footer-col" :to="{path: 'item', query: 4}">
+    <router-link class="footer-col" to="/user">
       <img src="../assets/img/footer_4.png" class="footer-img" alt="">
       <p>我的</p>
     </router-link>

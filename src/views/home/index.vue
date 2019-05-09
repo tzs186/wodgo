@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-f4f4f4">
+  <div class="bg-f4f4f4" style="padding-bottom: 50px;">
     <div class="posrel">
       <banner :listImg="listImg" :speed="preView" :opc="opc"></banner>
       <div class="homenav clearfix">
@@ -77,7 +77,7 @@
               <h5 class="text-elli-2 font-size14">{{item.name}}</h5>
               <div class="class_price">
               <span class="class_price-s coldb3822 font-size12 font-weight6">
-              <em>¥ <span class="int font-size17 font-weight6">{{item.price}}</span>.00</em>
+              <em>¥ <span class="int font-size17 font-weight6">{{item.price.slice(0,item.price.indexOf("."))}}</span>{{item.price.slice(item.price.indexOf("."))}}</em>
               </span>
                 <span class="badge">{{item.type}}</span>
               </div>
@@ -104,7 +104,8 @@
     data() {
       return {
         list: [],
-        scrollState: true,
+        off:true,
+        scrollState: false,
         page: {
           counter: 1,
           pageStart: 1,
@@ -304,20 +305,44 @@
         ]
       }
     },
-    mounted() {
+    created(){
+      var that=this;
+      window.onscroll = function(){
+        //变量scrollTop是滚动条滚动时，距离顶部的距离
+        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+        //变量windowHeight是可视区的高度
+        var windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        //变量scrollHeight是滚动条的总高度
+        var scrollHeight = document.documentElement.scrollHeight||document.body.scrollHeight;
+        //滚动条到底部的条件
+        if(scrollTop+windowHeight==scrollHeight&&that.off){
+          //写后台加载数据的函数
+          that.onRefresh();
+        }
+      }
 
-       this.onRefresh()
+    },
+    mounted() {
+      // this.onRefresh()
     },
     methods: {
       onRefresh(mun) { //刷新回调
-
         let that = this;
         that.$refs.myScroll.setState(3);
         IndexGoods({page: that.counter}).then((res) => {
-          console.log(res)
-          that.listdata=res;
+          console.log(res);
+         if(res!=undefined){
+           if( that.counter>1){
+             that.listdata=that.listdata.concat(res);
+           }else{
+             that.listdata=res;
+           }
+           that.counter++;
+         }else{
+            that.off=false;
+         }
 
-          that.counter++;
+
 
         }).catch((error) => {
           console.log(error)

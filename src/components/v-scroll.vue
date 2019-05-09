@@ -188,6 +188,15 @@
     transition: all 450ms;
     backface-visibility: hidden;
     /*perspective: 1000;*/
+
+    touch-action: none;
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
   .my-scroll{
     position: relative;

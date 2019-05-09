@@ -13,9 +13,27 @@ import request from '@/config/httpConfig'
 Vue.prototype.$axios = request;
 /* eslint-disable no-new */
 
-/*router.beforeEach((to,from,next)=>{
 
-})*/
+import vdialog from './components/dialog'
+
+Vue.use(vdialog);
+
+ router.beforeEach((to,from,next)=>{
+   if (to.matched.some(record => record.meta.keepAlive)){  // 判断该路由是否需要登录权限
+     if (window.sessionStorage.getItem('token')) {  // 判断当前的token是否存在
+       next();
+     }
+     else {
+       next({
+         path: '/login',
+         query: {redirect:to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
+       })
+     }
+   }
+   else {
+     next();
+   }
+})
 new Vue({
   el: '#app',
   router,
