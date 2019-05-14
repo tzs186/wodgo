@@ -1,47 +1,33 @@
 <template>
-  <div class="login   padding-top posfixed">
-    <img src="../../assets/img/logo.png" class="loginLogo" alt="">
-    <div class="loginForm">
-      <div>
-        <div class="form-group margin-bottom posrel">
-          <input type="text"  v-model="loginForm.mobile" name="names" class="groupinput" placeholder="请输入手机号码">
-          <span class="disblock posabs fa fa-mobile fa-2x"></span>
+  <div class="login   padding-top posfixed" style="background: #f0f0f0">
+    <heads :headData="headData" v-on:parentClick="parentClickEvent"></heads>
+
+      <div class="rgeform" style="">
+        <div class="">
+          <div class="loginCon-group" style="margin-bottom: 0">
+            <span class="margin-right font-size14">+86</span>
+            <input type="number" v-model="loginForm.mobile" @keyup="getInputValue"   id="MobileCode" class="loginCon-control" placeholder="请输入手机号码">
+          </div>
+          <div class="loginCon-group">
+            <input type="text"  v-model="loginForm.yzm" @keyup="getInputValue"  id="CheckCode" class="loginCon-control" placeholder="验证码">
+            <div class="yzmOff" id="yzmOff" @click="sendMessage">
+              {{word}}
+            </div>
+          </div>
+          <div class="loginCon-group">
+            <input type="password" v-model="loginForm.pwd" @keyup="getInputValue"   id="PassWord" class="loginCon-control" placeholder="请输入密码">
+          </div>
+          <div class="loginCon-group">
+            <input type="password" v-model="loginForm.confirmPwd" @keyup="getInputValue"   id="RePassWord" class="loginCon-control" placeholder="确认密码">
+          </div>
         </div>
-        <div class="form-group margin-bottom posrel">
-          <input type="text" name="pwd"  v-model="loginForm.yzm" class="groupinput" placeholder="请输入验证码">
-          <span class="disblock posabs   btn-yzm" @click="sendMessage">{{word}}</span>
-        </div>
-        <div class="form-group margin-bottom posrel">
-          <input type="password"  v-model="loginForm.pwd" name="pwd" class="groupinput" placeholder="请输入密码">
-          <span class="disblock posabs  fa fa-lock  fa-2x"></span>
-        </div>
-        <div class="form-group margin-bottom posrel">
-          <input type="password"  v-model="loginForm.confirmPwd" name="pwd" class="groupinput" placeholder="确认密码">
-          <span class="disblock posabs  fa fa-lock  fa-2x"></span>
-        </div>
-        <div class="form-group margin-bottom posrel">
-          <input type="checkbox" id="boxBtn" name="box" checked class="">
-          <label for="boxBtn"> 同意注册协议/Agreement on registration!</label>
-        </div>
-        <button @click="CheckLogin()" class="form-btn btn">注册/Register</button>
       </div>
-      <div>
-        <p class="text-center margin-bottom font-size14">- 或者 -</p>
-        <div class="form-group margin-bottom posrel">
-          <router-link to="/login" class="btn form-link-a bg-00a65a">
-            <i class="fa fa-user-plus"></i>
-            <span>已有用户登录/Existing user login</span>
-          </router-link>
-        </div>
-        <div class="form-group margin-bottom posrel">
-          <router-link to="/" class="btn form-link-a bg-00c0ef">
-            <i class="fa fa-home"></i>
-            <span>返回首页/Return to the home page</span>
-          </router-link>
-        </div>
-        <router-link to="/GetPass">忘记密码？/Forget the password</router-link>
+      <div class="padding-right padding-left margin-bottom">
+        <button v-if="!buttonShow" disabled    class="tBtn loginBtn"  >确认</button>
+        <button  v-if="buttonShow"    class="tBtn loginBtn" style="background: rgb(240, 60, 60)" @click="CheckLogin">确认</button>
       </div>
-    </div>
+      <p class="font-size12 col999 text-center"> 注册账号就视为已阅读并同意 <a href="protocol.php" class="col6494e5">用户协议</a></p>
+
     <vdialog v-show="showDialog"  :dialog-option="dialogOption"  ref="dialog"></vdialog>
   </div>
 </template>
@@ -52,6 +38,7 @@
     name: "login",
     data() {
       return {
+        headData: {msg: "注册", backUrl: "/login", rightText: "邮箱注册", rightShow: false, backgrounds: "#fff"},
         loginForm:{
           mobile:"",
           yzm:"",
@@ -65,7 +52,8 @@
           title: "提示",
           text: "",
           isShowCancelButton: false
-        }
+        },
+        buttonShow:false,
       }
     },
     created() {
@@ -75,6 +63,14 @@
 
     },
     methods: {
+      getInputValue(){
+        (this.loginForm.mobile.length>1&&this.loginForm.pwd.length>1&&this.loginForm.yzm.length>1&&this.loginForm.confirmPwd.length>1)?this.buttonShow=true:this.buttonShow=false;
+      },
+      parentClickEvent(switchs) {
+        if (switchs) {
+          this.$router.push({path:'/register'})
+        }
+      },
       sendMessage(){
         if(this.isOvertime){
           return false;
@@ -84,7 +80,7 @@
         var sendTimer = setInterval(function(){
           that.isOvertime = true;
           time--;
-          that.word = "重新发送"+time;
+          that.word = "重新发送"+time+"s";
           if(time < 0){
             that.isOvertime = false;
             clearInterval(sendTimer);
@@ -151,88 +147,77 @@
 
 <style scoped lang="less">
   .login {
-    background: rgb(210, 214, 222);
+    height: 100%;
+    background: #fff;
+    padding-top: 72px;
+  }
+  .loginform {
+    padding-top: 140px;
+  }
+  .loginCon {
+    width: 93%;
+    margin: 0.5rem auto 0;
+    position: relative;
+  }
+  .loginCon-group {
+    border-bottom: 1PX solid #e9e9e9;
+    padding: 15px  12px 0;
 
-    &Logo {
-      display: block;
-      margin: 100px auto;
-      width: 50%;
-    }
+    position: relative;
+  }
+  .loginCon-control {
+    height: 60px;
+    width: 70%;
+    line-height:60px;
+    font-family: "microsoft yahei";
+    font-size: 14PX;
+  }
+  .eyeOff {
+    width: 0.4rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+    font-size: 18PX;
+    text-align: center;
+  }
+  .loginBtn {
+    display: block;
+    width: 100%;
+    height:  80px;
+    font-size: 16PX;
+    margin: 160px 0 30px 0;
+    background: #e6e6e6;
+    color: #fff;
+  }
+  .reg-title {
+    background: #fff;
+    border-bottom: 1PX solid #a8a8a8;
+  }
+  .reg-titletext {
+    top: 0;
+    left: 50%;
+    margin-left: -15px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .rgeform {
+    background: #fff;
+    margin-top: 0.2rem;
+  }
+  .yzmOff{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    line-height: 90px;
 
-    &Form {
-      display: block;
-      width: 90%;
-      margin: 0 auto;
-      padding: 30px;
-      background: #ffffff;
-
-      .form-group {
-        .groupinput {
-          display: block;
-          width: 100%;
-          height: 70px;
-          padding: 10px 100px 10px 20px;
-          color: #555;
-          background-color: #fff;
-          background-image: none;
-          border: 1px solid #ccc;
-        }
-
-        span {
-          right: 20px;
-          top: 12px;
-        }
-        .btn-yzm{
-          display: block;
-          height: 70px;
-          line-height: 70px;
-          width:150px;
-          top: 0;
-          right: 0;
-          text-align: center;
-          background: red;
-          color: #fff;
-          cursor: pointer;
-
-        }
-      }
-
-      .form-btn {
-        display: block;
-        width: 100%;
-        height: 70px;
-        background: #f39c12;
-        border-color: #e08e0b;
-        color: #fff;
-        margin-bottom: 70px;
-      }
-
-      .form-link-a {
-        position: relative;
-        padding-left: 88px;
-        text-align: left;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
-        width: 100%;
-        height: 70px;
-        line-height: 70px;
-        color: #fff;
-
-        > :first-child {
-          position: absolute;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          width: 70px;
-          height: 70px;
-          line-height: 70px;
-          font-size: 1.6em;
-          text-align: center;
-          border-right: 1PX solid rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
+    right: 0;
+    top: 0;
+    border-left: 1px solid #e9e9e9;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(240, 60, 60);
+  }
+  .rgeform .loginCon-group{
+    padding:   15px;
   }
 </style>

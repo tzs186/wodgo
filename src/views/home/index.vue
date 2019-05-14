@@ -380,7 +380,6 @@
        });*/
         IndexGoods().then((res) => {
           vm.listdata = res;
-
         }).catch((error) => {
           console.log(error)
         })

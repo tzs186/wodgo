@@ -17,8 +17,11 @@ Vue.prototype.$axios = request;
 import vdialog from './components/dialog'
 
 Vue.use(vdialog);
+import heads from './components/headers'
 
+Vue.use(heads);
  router.beforeEach((to,from,next)=>{
+
    if (to.matched.some(record => record.meta.keepAlive)){  // 判断该路由是否需要登录权限
      if (window.sessionStorage.getItem('token')) {  // 判断当前的token是否存在
        next();

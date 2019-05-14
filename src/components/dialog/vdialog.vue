@@ -1,5 +1,5 @@
 <template>
-  <div class="dialog">
+  <div class="dialog" >
     <div class="mask"  ></div>
     <div class="dialog-content">
       <h3 class="title">{{ modal.title }}</h3>
@@ -19,6 +19,7 @@
     },
     data() {
       return {
+
         resolve: '',
         reject: '',
         promise: '', // 保存promise对象
