@@ -19,20 +19,19 @@ Vue.use(vdialog);
 
 import heads from './components/headers'
 Vue.use(heads);
- router.beforeEach((to,from,next)=>{
 
+
+ router.beforeEach((to,from,next)=>{
    if (to.matched.some(record => record.meta.keepAlive)){  // 判断该路由是否需要登录权限
      if (window.sessionStorage.getItem('token')) {  // 判断当前的token是否存在
        next();
-     }
-     else {
+     } else {
        next({
          path: '/login',
          query: {redirect:to.fullPath}  // 将跳转的路由path作为参数，登录成功后跳转到该路由
        })
      }
-   }
-   else {
+   } else {
      next();
    }
 })

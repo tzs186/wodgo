@@ -330,7 +330,6 @@
         let that = this;
         that.$refs.myScroll.setState(3);
         IndexGoods({page: that.counter}).then((res) => {
-          console.log(res);
          if(res!=undefined){
            if( that.counter>1){
              that.listdata=that.listdata.concat(res);
@@ -341,9 +340,6 @@
          }else{
             that.off=false;
          }
-
-
-
         }).catch((error) => {
           console.log(error)
         })
@@ -361,7 +357,6 @@
           } else {
             this.$refs.myScroll.setState(7);
           }
-
         }).catch((error) => {
           console.log(error)
         })
@@ -369,7 +364,6 @@
       getTop(y) {//滚动条位置
         this.indexScrollTop = y;
       },
-
       getList() {
         let vm = this;
         /*vm.$http.get('api/Json/IndexGoods.php').then((response) => {
