@@ -15,10 +15,9 @@ Vue.prototype.$axios = request;
 
 
 import vdialog from './components/dialog'
-
 Vue.use(vdialog);
-import heads from './components/headers'
 
+import heads from './components/headers'
 Vue.use(heads);
  router.beforeEach((to,from,next)=>{
 
