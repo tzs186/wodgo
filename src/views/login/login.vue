@@ -63,6 +63,7 @@
     },
     methods: {
       getInputValue(){
+        //当全部输入框输入是时，按钮高亮显示
         (this.loginForm.mobile.length>1&&this.loginForm.pwd.length>1)?this.buttonShow=true:this.buttonShow=false;
       },
       parentClickEvent(switchs) {

@@ -75,7 +75,7 @@ a {
 
 a,
 input,
-button {
+button,textarea {
     border-top-width: 0px;
     border-right-width: 0px;
     border-bottom-width: 0px;
@@ -284,16 +284,234 @@ button {
     border: none;
 }
 .user-list-img{
-    width: 0.56rem;
-    vertical-align: -0.15rem;
-    margin-right: 0.2rem;
+  width: 0.40rem;
+  vertical-align: -0.09rem;
+  margin-right: 0.2rem;
 }
 .user-more{
- width: 0.25rem;
-    vertical-align: -0.15rem;
+  width: 0.15rem;
+  vertical-align: -0.09rem;
 }
 .user-order-img{
     display: block;
     margin: 0 auto 0.2rem;
     width: 0.7rem;
 }
+.badge{
+  display: inline-block;
+  padding: 0 4px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 10px;
+  font-weight: normal;
+  background:#FF0000;;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.user-order .badge{
+  position: absolute;
+  top: 0rem;
+  right: 0.2rem;
+}
+.myOrderUl{
+    position: fixed;
+  left: 0;
+  right: 0;
+  top: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+
+
+}
+.myOrderUl .flex1 a{
+  display: inline-block;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  padding: 0 0.2rem;
+  color: #666565;
+  border-bottom: 1px solid transparent;
+}
+.myOrderUl .act a{
+  color: #da618f;
+  border-bottom: 1px solid #da618f;
+}
+.orderCon{
+  margin-top: 1.65rem;
+  position: relative;
+}
+.order-list-number {
+  padding: 0.2rem;
+  position: relative;
+  border-bottom: 1px solid #f7f7f7;
+}
+.goods-details-brand-link {
+  position: relative;
+  display: flex;
+  padding: 0.2rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+ .goods-details-brand-link:last-child {
+  border-bottom: none;
+}
+.brand-link-img {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.1rem;
+}
+.brand-link-jr {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.6rem;
+}
+.brand-list {
+  padding: 0.08rem;
+}
+
+.order-list-nub {
+  right: 0.2rem;
+  top: 0;
+}
+.order-pay-btn {
+  display: inline-block;
+  height: 0.55rem;
+  line-height: 0.54rem;
+  text-align: center;
+  border: 1px solid #555555;
+  border-radius: 0.275rem;
+  font-size: 0.18rem;
+  padding: 0 0.1rem;
+  margin: 0 0.05rem;
+  vertical-align: top;
+}
+.pay-btn-red {
+  border: 1px solid #f23a3a;
+
+  color: #f23a3a;
+}
+.orderDerails{
+  width: 90%;
+  padding-top: 0.2rem;
+  margin: 0 auto 52px;
+}
+.ordeName{
+  display: inline-block;
+  width: 2rem;
+  color: #242424;
+}
+.ordePrice{
+  display: inline-block;
+  width: 1.3rem;
+  text-align: left;
+}
+.order-fixed-btn{
+  height: 60px;
+  background: rgb(243, 244, 245);
+}
+.order-btn-link{
+  display: inline-block;
+  height: 0.55rem;
+  line-height: 0.54rem;
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  color: #515151;
+  font-size: 0.18rem;
+  padding: 0 0.2rem;
+  margin-top: 0.3rem;
+  margin-right: 0.2rem;
+}
+.orderkong{
+  text-align: center;
+  padding:2.6rem 0;
+}
+.orderkong>img{
+  width: 1.6rem;
+}
+.evaluate .brand-link-img{
+  border: 1px solid #eee;
+}
+.evaluateArea{
+  display: block;
+  border: none;
+  width: 100%;
+  height: 1.5rem;
+  resize: none;
+  background: transparent;
+  font-family: "microsoft yahei";
+}
+.uploadingDiv{
+  position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
+  overflow: hidden;
+  margin-right: 0.1rem ;
+  margin-bottom: 0.1rem;
+  background: #fff;
+  display: flex;
+  align-items: center
+}
+.uploadingDiv>img{
+  align-items: center;
+}
+.uploadingDiv>.uploadingFile{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.orderGrade{
+  border-left: 3px solid #eb5790;
+  color: #333;
+  padding-left: 0.2rem;
+}
+.graded{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 0.2rem;
+  background: url(../img/graded.png) no-repeat left top;
+  background-size: 100% 100%;
+}
+.gradedRed{
+  background: url(../img/gradedred.png) no-repeat left top;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
