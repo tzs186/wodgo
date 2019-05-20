@@ -63,7 +63,20 @@
 <script>
 
   $(function () {
+      var $uploaderInput = $("#uploaderInput");
+      $uploaderInput.on("change", function (e) {
+          var src,that=$(this), url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+          for (var i = 0, len = files.length; i < len; ++i) {
+              var file = files[i];
+              if (url) {
+                  src = url.createObjectURL(file);
+              } else {
+                  src = e.target.result;
+              }
 
+              $("#userCompileImg").attr("src",src)
+          }
+      });
   })
 </script>
 </body>
