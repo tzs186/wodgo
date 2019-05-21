@@ -593,15 +593,17 @@ button,textarea {
 }
 
 .customer-kefu{
-    width: 0.2rem;
-    height: 0.5rem;
-    position: absolute;
-    top: 0.1rem;
-    z-index: 99;
+  width:0;
+  height:0;
+  border-style:solid;
+  position: absolute;
+  top: 0.1rem;
+  z-index: 99;
 }
 .service-msg .customer-kefu{
-    background: url('../img/triangle-left.png') no-repeat left top;
-    left: -0.19rem;
+  border-width:0.19rem 0.19rem 0.19rem 0;
+  border-color:transparent #fff transparent transparent;/*透明 灰 透明 透明 */
+  left: -0.19rem;
 }
 .service-msg .customer-img{
     left: -1.2rem;
@@ -610,8 +612,9 @@ button,textarea {
     right: -1.2rem;
 }
 .guest-msg .customer-kefu{
-    background: url('../img/triangle-right.png')  no-repeat right top;
-    right: -0.19rem;
+  border-width:0.19rem 0 0.19rem 0.19rem ;
+  border-color:transparent  transparent transparent #fff;/*透明 灰 透明 透明 */
+  right: -0.19rem;
 }
 .customer-input{
     width: 80%;
@@ -625,8 +628,19 @@ button,textarea {
 .customer-btn{
 
 }
-
-
+.swiper-details .swiper-wrapper .swiper-slide img{
+  height: 7.51rem;
+  vertical-align: top;
+}
+.swiper-details .swiper-pagination{
+  width: auto;
+  background: #b5b5b5;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 20px;
+  left: auto;
+  right: 0.2rem;
+}
 
 
 
