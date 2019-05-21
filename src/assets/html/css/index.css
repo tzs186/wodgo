@@ -641,7 +641,11 @@ button,textarea {
   left: auto;
   right: 0.2rem;
 }
-
+.group-time{
+  color: #fff;
+  padding: 0.2rem;
+  background: #da618f;
+}
 
 
 
