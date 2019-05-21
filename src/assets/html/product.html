@@ -1,73 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="format-detection" content="telephone=on"/>
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/public.js"></script>
-  <script src="layer_mobile/layer.js"></script>
-  <title>商品詳情</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="format-detection" content="telephone=on"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="layer_mobile/layer.js"></script>
+    <title>商品詳情</title>
 </head>
 <body>
+<div class="home-padding">
 <div class="clearfix head-top">
-  <a href="index.html" class="head-top-back padding-left">
-    <img src="img/goback.png" alt="">
-    <span>商品詳情</span>
-  </a>
+    <a href="index.html" class="head-top-back padding-left">
+        <img src="img/goback.png" alt="">
+        <span>商品詳情</span>
+    </a>
 </div>
-<div class="home-con   "  >
-  <div class=" swiper-container swiper-details">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href=" ">
-          <img src="img/product-details.png" alt="">
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href=" ">
-          <img src="img/product-details.png" alt="">
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href=" ">
-          <img src="img/product-details.png" alt="">
-        </a>
-      </div>
+<div class="home-con   ">
+    <div class=" swiper-container swiper-details">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href=" ">
+                    <img src="img/product-details.png" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href=" ">
+                    <img src="img/product-details.png" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href=" ">
+                    <img src="img/product-details.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
     </div>
-    <!-- 如果需要分页器 -->
-    <div class="swiper-pagination"></div>
-  </div>
-  <div class="group-time"></div>
+    <div class="group-time clearfix">
+        <span class="fl font-size16 w10">拼團</span>
+        <div class="clearfix details-time fr w70 text-right" id="dao">
+            <span>距結束 </span>
+            <span class="time" id="day">999</span>
+            <span class="type">天</span>
+            <span class="time" id="hour">08</span>
+            <span class="type">時</span>
+            <span class="time" id="minutes">32</span>
+            <span class="type">分</span>
+            <span class="time" id="second">45</span>
+            <span class="type">秒</span>
+        </div>
+        <div class="dishide fr w70 text-right" id="daoend">活动已结束</div>
+    </div>
 </div>
+<div class="padding2 bg-fff margin-bot1 posrel">
+    <div class="details-h text-elli-2 font-size17 col333 font-weight6 margin-bottom w80"
+         style="height: 0.9rem;line-height: 0.45rem;">
+        香港9价HPV疫苗套餐【涞富健康】【周期0-2-6】【三针保障】
+    </div>
+    <!-- 分享圖片 -->
+    <a href="" class="proShare">
+        <img src="img/share.png" alt="">
+    </a>
+    <div class="font-size17 margin-bot1">
+        <span class="coldb3822 font-weight6">￥1200.00</span>
+        <span class="col868686 text-through">￥1500.00</span>
+    </div>
+    <div class="font-size13 col868686 padding-bottom">
+        <span class="margin-right padding-right">運費：免運費</span>
+        <span class="margin-left padding-left">銷量：2563</span>
+    </div>
+</div>
+<div class="padding-left padding-right bg-fff margin-bot1">
+    <div class="  clearfix set-cell border-none ">
+        <label class="weui-label">選擇 <span class="col808080">請選擇規格</span></label>
+        <div class="weui-cell__bd flex1 text-right">
+            <img src="img/more.png" class="user-more" alt="">
+        </div>
+    </div>
+</div>
+<div class="padding-left padding-right bg-fff margin-bot1">
+    <div class="clearfix set-cell border-none ">
+        <label class="weui-label">支付開團邀請1人參團，人數不足自動退款</label>
+        <div class="weui-cell__bd flex1 text-right">
+            <span class="col808080" style="vertical-align: -0.03rem;">玩法详情</span>
+            <img src="img/more.png" class="user-more" alt="">
+        </div>
+    </div>
+</div>
+<div class="padding-left padding-right bg-fff margin-bot1">
+    <div class="clearfix set-cell border-none ">
+        <label class="weui-label">
+            <img src="img/logo.png" class="proImg" alt="">
+            <span> 涞富健康</span>
+        </label>
+        <div class="weui-cell__bd flex1 text-right">
+            <img src="img/more.png" class="user-more" alt="">
+        </div>
+    </div>
+</div>
+<div class="ui-flex  productList bg-fff text-center">
+    <div class="flex1 act">
+        <a href="javascript:;">商品詳情</a>
+    </div>
+    <div class="flex1">
+        <a href="javascript:;">成交記錄</a>
+    </div>
+    <div class="flex1">
+        <a href="javascript:;">商品評價</a>
+    </div>
+</div>
+<div class="proTab padding-bottom   bg-fff">
+    <div class="proTabCon  bg-fff">
+        <img src="img/prodead.png" alt="">
+        <img src="img/product-details.png" alt="">
+    </div>
+    <div style="display: none" class="proTabCon  bg-fff padding-top">
+        <div class="clearfix makeList">
+            <div class="makeListDiv font-weight6 ">買家</div>
+            <div class="makeListDiv font-weight6  ">成交時間</div>
+            <div class="makeListDiv font-weight6  ">數量</div>
+        </div>
+        <div class="" id="makeList">
+            <div class="clearfix makeList">
+                <div class="makeListDiv col808080 ">海蓝天</div>
+                <div class="makeListDiv col808080  ">2019.05.10</div>
+                <div class="makeListDiv col808080  ">1</div>
+            </div>
+            <div class="clearfix makeList">
+                <div class="makeListDiv col808080 ">海蓝天</div>
+                <div class="makeListDiv col808080  ">2019.05.10</div>
+                <div class="makeListDiv col808080  ">1</div>
+            </div>
+            <div class="clearfix makeList">
+                <div class="makeListDiv col808080 ">海蓝天</div>
+                <div class="makeListDiv col808080  ">2019.05.10</div>
+                <div class="makeListDiv col808080  ">1</div>
+            </div>
+            <div class="clearfix makeList">
+                <div class="makeListDiv col808080 ">海蓝天</div>
+                <div class="makeListDiv col808080  ">2019.05.10</div>
+                <div class="makeListDiv col808080  ">1</div>
+            </div>
+            <div class="clearfix makeList">
+                <div class="makeListDiv col808080 ">海蓝天</div>
+                <div class="makeListDiv col808080  ">2019.05.10</div>
+                <div class="makeListDiv col808080  ">1</div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none" class="proTabCon bg-fff  ">
+        <div class="ui-flex padding2">
+            <div class="flex1"><a href="javascript:;" class="good-star-btn act">追評0</a></div>
+            <div class="flex1"><a href="javascript:;" class="good-star-btn">好評2</a></div>
+            <div class="flex1"><a href="javascript:;" class="good-star-btn">中評0</a></div>
+            <div class="flex1"><a href="javascript:;" class="good-star-btn">差評0</a></div>
+        </div>
+        <div class="" id="proStar">
+            <div class="pro-star-con">
+                <img src="img/Button_4.png" class="pro-portrait" alt="">
+                <div class="">
+                    <h4>蝴蝶梦</h4>
+                    <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                    <div class="margin-bot1">
+                        <span>好評</span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                    </div>
+                    <div class="text-elli-2 margin-bot1 co747474">
+                        环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                    </div>
+                    <div id="uploadingImg " class="clearfix">
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-star-con">
+                <img src="img/Button_4.png" class="pro-portrait" alt="">
+                <div class="">
+                    <h4>蝴蝶梦</h4>
+                    <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                    <div class="margin-bot1">
+                        <span>好評</span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                    </div>
+                    <div class="text-elli-2 margin-bot1 co747474">
+                        环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                    </div>
+                    <div id="uploadingImg " class="clearfix">
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-star-con">
+                <img src="img/Button_4.png" class="pro-portrait" alt="">
+                <div class="">
+                    <h4>蝴蝶梦</h4>
+                    <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                    <div class="margin-bot1">
+                        <span>好評</span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                        <span class="graded gradedRed"></span>
+                    </div>
+                    <div class="text-elli-2 margin-bot1 co747474">
+                        环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                    </div>
+                    <div id="uploadingImg " class="clearfix">
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                        <div class="uploadingDiv fl">
+                            <img src="blob:http://localhost:63342/b21304f0-c1c0-4383-8fcf-b6c817ca29c6" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="de_btn_bar">
+    <div class="icon_btn">
+        <i class="fa fa-headphones  coldb3822"><img src="img/kefu.png" alt=""></i>
+        <span class="txt">客服</span>
+    </div>
 
+    <div class="btn_group">
+        <div class="ui-flex center "  >
+            <div class="btn btn_orange bg-f8d559 colred" id="addCart2">
+                <p>￥1500</p>
+                <p>单独购买</p>
+
+            </div>
+            <div class="btn btn_buy bg-de3c22" id="buyBtn2">
+                <p>￥1500</p>
+                <p>拼团购买</p>
+
+            </div>
+            <!--禁止状态下新增bg-999 colfff这两个类-->
+            <div class="btn btn_buy bg-da618f colfff dandubtn" >
+                <p>拼团购买</p>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
 
-  $(function () {
-    $("body,html").css("background", "#f3f4f5");
+    $(function () {
+        $("body,html").css("background", "#f3f4f5");
 
-      var swiper = new Swiper('.swiper-container', {
-        centeredSlides: true,
-        loop: true,
-        autoplay: true,
-        speed: 1000,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          type: 'fraction',
-        },
-      });
+        var swiper = new Swiper('.swiper-container', {
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            speed: 1000,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'fraction',
+            },
+        });
 
-  })
+        $(".productList .flex1").click(function () {
+            $(this).addClass("act").siblings(".flex1").removeClass("act");
+            $(".proTab  .proTabCon").eq($(this).index()).show().siblings(".proTabCon").hide();
+        })
+    })
+
+
+    //倒计时
+    var timer_rt = window.setInterval("GetRTime()", 1000);
+    //倒计时
+    var startTime = new Date();
+    startTime.setFullYear(2019, 6, 15);
+    startTime.setHours(23);
+    startTime.setMinutes(59);
+    startTime.setSeconds(59);
+    startTime.setMilliseconds(999);
+    var EndTime = startTime.getTime();
+
+    function GetRTime() {
+        var NowTime = new Date();
+        var nMS = EndTime - NowTime.getTime();
+        var nD = Math.floor(nMS / (1000 * 60 * 60 * 24));
+        var nH = Math.floor(nMS / (1000 * 60 * 60)) % 24;
+        var nM = Math.floor(nMS / (1000 * 60)) % 60;
+        var nS = Math.floor(nMS / 1000) % 60;
+        if (nMS < 0) {
+            $("#dao").hide();
+            $("#daoend").show();
+        } else {
+            $("#dao").show();
+            $("#daoend").hide();
+            $("#day").text(nD);
+            $("#hour").text(nH);
+            $("#minutes").text(nM);
+            $("#second").text(nS);
+        }
+    }
+
 </script>
 </body>
 </html>
