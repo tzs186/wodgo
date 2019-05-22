@@ -163,6 +163,16 @@
     -ms-flex-align: center;
     align-items: center
 }
+.tzs-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
 .flex1{
     display: block;
     width: 100%;
@@ -223,7 +233,11 @@
     bottom: 0;
     z-index: 99;
 }
-
+.bodyOver{
+  position: fixed;
+  width: 100%;
+  height: 100%;overflow: hidden;
+}
 
 
 

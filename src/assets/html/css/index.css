@@ -35,6 +35,8 @@ body {
     color: #333333;
     position: relative;
     font-size: 14px!important;
+    max-width: 7.5rem;
+    margin: 0 auto;
 }
 
 body, html {
@@ -522,7 +524,7 @@ button,textarea {
 }
 .discountText{
   float: right;
-  width: 4.5rem;
+  width: 4.2rem;
   height: 2.0rem;
 }
 .expiredTypeImg{
@@ -806,18 +808,209 @@ button,textarea {
     height: 50px;
     line-height: 50px;
 }
+.proFixedBg{
+  z-index: 999;
+  background: rgba(0,0,0,0.4);
+  display: none;
+}
+.proFormDetails{
+  height: 100%;
+  position: relative;
+  padding-top: 20%;
+}
+.proFixedCom{
+  position: relative;
 
+  margin-bottom: 55px;
+  padding: 0.2rem;
+  background: #fff;
+  /*max-height: 82%;*/
+  overflow-y: scroll;
+}
+.proSpeciText{
+  padding: 0.2rem 0.2rem 0.2rem 2.2rem;
+}
+.proSpeciTextImg{
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 0.2rem;
+  top: -0.3rem;
+  background: #fff;
+  border-radius: 5px;
+}
+.makeMonthUlBtn,.makeDayUlBtn{
+  width: 1.8rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.3rem;
+  border: 1px solid #b2b2b2;
+  border-radius: 3px;
+  margin: 0 0.23rem 0.2rem 0;
+  color: #2e2e2e;
+  float: left;
+  cursor: pointer;
+}
+.makeMonthUl .makeMonthUlBtn.act,.makeDayUl .makeMonthUlBtn.act{
+  background: #eb85ac;
+  border: 1px solid #eb85ac;
+  color: #fff;
+}
+.makeDayUl .makeMonthUlBtn{
+  width: 0.99rem;
+}
+.makeDayUl .makeMonthUlBtn:nth-child(6n){margin-right: 0}
+.makeDayUl .disabledBtn{
+  background: #d6d6d6;
+  border: 1px solid #d6d6d6;
+}
+.addSubtract,.addSubtractNubVal{
+  display: block;
 
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.45rem;
+  text-align: center;
+  border: 1px solid #363638;
+  float: left;
 
+}
+.SubtractNubBtn{
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.addNubBtn{
+  font-size: 0.5rem;
+  font-weight: normal;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+ .addSubtractNubVal{
+   width: 0.6rem;
+   border-left: none;
+   border-right: none;
+   font-weight: bold;
+ }
+.addSiteList {
+  border-bottom: 1px solid #ececec;
+}
+.addSiteList .order-list-name {
+  display: inline-block;
+  width: 26%;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+}
+.order-msg {
+  border: none;
+  resize: none;
+  /* vertical-align: middle; */
+  width: 75%;
+  font-size: 16px;
+  height: 25px;
+}
+.productLinkPay{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #eb5790;
+  color: #fff;
+  font-size: 16px;
+  z-index: 9;
+}
+.serviceRadio{display: none}
+.serviceSelectAct .serviceRadio{
+  display: block;
+}
+.serviceSelectAct .serviceRadio>img{vertical-align: top}
+.payImg{
+  width: 0.6rem;
+  vertical-align: middle;
+}
+.pitchOn{
+  width: 0.3rem;
+  display: none;
+}
+.pitchPaySelect .pitchOn{
+  display: inline-block;
+}
+.orderPayMsg{
+  width: 90%;
+  height: 1.5rem;
+  margin-left: 0.1rem;
+  resize: none;
+}
+.payDiscounts{
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  padding: 0.2rem;
+}
+.test-radio, .pay-radio {
+  display: none;
+}
+.payAdvice {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-image: url(../img/Unselected.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+.pay-radio:checked + .payAdvice {
+  background-image: url(../img/selected.png);
+}
+.yhqLabel{
+  display: block;
+  position: absolute;
+  right: 0.0rem;
+  top: 1rem;
+}
+.paySucceed{
+  padding-top: 1.4rem;
+  position: relative;
+  text-align: center;
+}
+.paySucceedImg{
+  width: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.paySucceedBtn{
+  display: block;
+  margin: 0.3rem auto 0;
+  width: 80%;
+  height: 50px;
+  line-height: 50px;
+  border: #949494 1px solid;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.payBtnRed{
+  color: #eb5790;
+  border: 1px solid #eb5790;
+}
+.productExplainAbs{
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  padding: 0.2rem;
+}
+.ExplainTextMsg{
+  text-indent: 2em;
+  line-height: 0.4rem;
+  font-size: 12px;
 
-
-
-
-
-
-
-
-
+}
 
 
 

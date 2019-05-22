@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="format-detection" content="telephone=on"/>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/public.js"></script>
+  <script src="layer_mobile/layer.js"></script>
+  <title>確認訂單</title>
+</head>
+<body>
+<div class="clearfix head-top">
+  <a href="index.html" class="head-top-back padding-left">
+    <img src="img/goback.png" alt="">
+    <span>確認訂單</span>
+  </a>
+</div>
+<div class="home-con" style="padding-bottom: 50px">
+  <div class="padding1 bg-f2f2f2"></div>
+  <div class="addSiteList padding2 posrel clearfix font-weight6 border-none bg-fff margin-bottom"  >
+    <span class="margin-right">聯繫人</span>
+    <span>丛云 18875858966</span>
+  </div>
+  <div class="orderConList bg-fff margin-bottom">
+    <div class="order-list-number clearfix  ">
+      <div class="order-list-name col666 fl">
+        <span>商品信息</span>
+      </div>
+    </div>
+    <a href="" class="goods-details-brand-link bg-f6f6f6 ">
+      <img src="img/c.jpg" class="brand-link-img" alt="">
+      <div class="brand-link-com posrel ">
+        <h4 class="   col333 font-size14   text-elli-2 w80 margin-bot1">香港9價HPV疫苗套餐【周期0-2-6】【三針保障】 </h4>
+        <div class="margin-bot1 col868686">拼团购买</div>
+        <div class="class_price margin-none">
+          <span class="class_price-s    font-size16   ">￥1200</span>
+        </div>
+        <p class="posabs order-list-nub font-size16  ">x1</p>
+      </div>
+    </a>
+    <div class="font-size16 font-weight6 margin-bot1 clearfix padding2">
+      <span>購買數量</span>
+      <div class="fr">
+        <span class="addSubtract SubtractNubBtn" onclick="addSubtract(this,1)">—</span>
+        <input type="text" class="addSubtractNubVal" id="addSubtractNubVal" value="1" name="nub">
+        <span class="addSubtract addNubBtn" onclick="addSubtract(this,2)">+</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="padding-left padding-right bg-fff margin-bot1">
+    <!-- 優惠券Id -->
+    <input type="hidden" value="0" name="CouponId" id="CouponId">
+    <div class="clearfix set-cell"  id="selectCoupon" style="padding: 0.3rem 0">
+      <label class="weui-label">
+        <span> 使用優惠券</span>
+      </label>
+      <div class="weui-cell__bd flex1 text-right">
+        <span id="CouponVal">不使用</span>
+        <img src="img/more.png" class="user-more" alt="">
+      </div>
+    </div>
+    <!-- 支付方式選擇  -->
+    <input type="hidden" name="patSelect" id="patSelect" value="1">
+    <div class="clearfix set-cell   pitchPayBtn pitchPaySelect" data-pay="1" style="padding: 0.3rem 0">
+      <label class="weui-label">
+        <img src="img/WeChatpay.png" class="payImg" alt="">
+        <span> 微信支付 </span>
+      </label>
+      <div class="weui-cell__bd flex1 text-right">
+        <img src="img/gouxuan.png" class="pitchOn" alt="">
+      </div>
+    </div>
+    <div class="clearfix set-cell   pitchPayBtn  " data-pay="2" style="padding: 0.3rem 0">
+      <label class="weui-label">
+        <img src="img/PayAli-Pay.png"  class="payImg" alt="">
+        <span>  支付宝支付</span>
+      </label>
+      <div class="weui-cell__bd flex1 text-right">
+        <img src="img/gouxuan.png" class="pitchOn" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="font-size16 font-weight6 margin-bot1 clearfix padding2 bg-fff">
+    <span class="fl">買家留言</span>
+    <div class="fl w70" >
+      <textarea name="msg" class="orderPayMsg" placeholder="建議留言前先與商家溝通確認"></textarea>
+    </div>
+  </div>
+  <!-- 優惠券 -->
+  <div class="posfixed proFixedBg"  >
+      <div class="payDiscounts">
+        <div class="  clearfix set-cell">
+          <label class="weui-label">選擇優惠券</label>
+          <div class="weui-cell__bd flex1 text-right">
+             <img src="img/shutdown.png" class="couponImgHide" style="width: 0.3rem" alt="">
+          </div>
+        </div>
+        <div class="padding-top padding-bottom">
+          <div class="discountList discountListRed  clearfix">
+            <div class="discountPrice ">
+              <div class="padding-top">
+                ¥<span class="discountPriceNub">20</span>元
+              </div>
+              <div>滿300元可用</div>
+            </div>
+            <div class="discountText">
+              <div class="discountTextType padding-bottom padding-top font-size15 font-weight6"> 全品類使用</div>
+              <p class="margin-bot1 col7c7c7c">獲得日期2019.05.10 </p>
+              <p class="margin-bot1 col7c7c7c">有效期至2019.05.10 </p>
+
+              <label for="coupon1" class="yhqLabel">
+                <input type="radio" id="coupon1"   value="1" class="pay-radio" name="payManner">
+                <span class="payAdvice"></span>
+              </label>
+            </div>
+          </div>
+          <div class="discountList discountListRed  clearfix">
+            <div class="discountPrice ">
+              <div class="padding-top">
+                ¥<span class="discountPriceNub">20</span>元
+              </div>
+              <div>滿300元可用</div>
+            </div>
+            <div class="discountText">
+              <div class="discountTextType padding-bottom padding-top font-size15 font-weight6"> 全品類使用</div>
+              <p class="margin-bot1 col7c7c7c">獲得日期2019.05.10 </p>
+              <p class="margin-bot1 col7c7c7c">有效期至2019.05.10 </p>
+              <label for="coupon2" class="yhqLabel">
+                     <input type="radio" id="coupon2"   value="2" class="pay-radio" name="payManner">
+                    <span class="payAdvice"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="  clearfix set-cell border-none">
+          <label class="weui-label">不使用優惠券</label>
+          <div class="weui-cell__bd flex1 text-right">
+            <label for="give">
+                   <input type="radio" id="give"   value="0" class="pay-radio" name="payManner">
+                  <span class="payAdvice"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="de_btn_bar tzs-center ">
+  <div class="icon_btn padding-left" style="width: 60%;text-align: left;">
+    实付款： <span class="coldb3822">￥1500</span>
+  </div>
+  <div class="btn_group">
+    <div class="ui-flex center ">
+      <div class="btn btn_buy bg-da618f colfff dandubtn" id="addPayOrder">
+        <p>立即支付</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function () {
+    $("body,html").css("background", "#f3f4f5")
+
+    //支付方式選擇
+    $(".pitchPayBtn").click(function () {
+      $(this).addClass("pitchPaySelect").siblings(".pitchPayBtn").removeClass("pitchPaySelect");
+      $("#patSelect").val($(this).attr("data-pay"))
+    })
+  })
+  /*選擇優惠券*/
+  $("#selectCoupon").click(function () {
+    $(".proFixedBg").show();
+  });
+
+  $(".pay-radio").change(function () {
+    $(".proFixedBg").hide();
+    $(this).val()=="0"?$("#CouponVal").text("不使用優惠券"):$("#CouponVal").text("使用優惠券");
+    $("#CouponId").val($(this).val())
+
+  });
+  $(".couponImgHide").click(function () {
+    $(".proFixedBg").hide();
+  })
+  /*数量加减*/
+  function addSubtract(that, nub) {
+    var nubVal = $("#addSubtractNubVal").val();
+    nub == "1" ? nubVal <= 1 ? nubVal : nubVal-- : nubVal++;
+    $("#addSubtractNubVal").val(nubVal);
+  }
+</script>
+</body>
+</html>
