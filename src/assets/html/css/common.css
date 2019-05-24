@@ -2,9 +2,9 @@
 .font-size11{font-size: 11px;}
 .font-size12{font-size: 12px;}
 .font-size13{font-size: 13px;}
-.font-size14{font-size: 14px;}
+.font-size14{font-size: 0.23rem;}
 .font-size15{font-size: 15px;}
-.font-size16{font-size: 16px;}
+.font-size16{font-size: 0.25rem;}
 .font-size17{font-size: 17px;}
 .font-size18{font-size: 18px;}
 .font-size19{font-size: 19px;}
@@ -133,6 +133,7 @@
 .colb5b5b5{color: #b5b5b5!important;}
 .colred{color: #da618f!important;}
 .col868686{color: #868686!important;}
+.col353535{color: #353535!important;}
 .border-none{border: none!important;}
 
 

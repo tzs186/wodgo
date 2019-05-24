@@ -1,676 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="format-detection" content="telephone=on"/>
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/public.js"></script>
-  <script src="layer_mobile/layer.js"></script>
-  <title>商品詳情</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="format-detection" content="telephone=on"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/date.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="layer_mobile/layer.js"></script>
+    <title>商品詳情</title>
 </head>
 <body>
 <div class="home-padding">
-  <div class="clearfix head-top">
-    <a href="index.html" class="head-top-back padding-left">
-      <img src="img/goback.png" alt="">
-      <span>商品詳情</span>
-    </a>
-  </div>
-  <div class="home-con   ">
-    <div class=" swiper-container swiper-details">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href=" ">
-            <img src="img/product-details.png" alt="">
-          </a>
+    <div class="clearfix head-top">
+        <a href="index.html" class="head-top-back padding-left">
+            <img src="img/goback.png" alt="">
+            <span>商品詳情</span>
+        </a>
+    </div>
+    <div class="home-con   ">
+        <div class=" swiper-container swiper-details">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=" ">
+                        <img src="img/product-details.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=" ">
+                        <img src="img/product-details.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=" ">
+                        <img src="img/product-details.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-slide">
-          <a href=" ">
-            <img src="img/product-details.png" alt="">
-          </a>
+        <div class="group-time clearfix">
+            <span class="fl font-size16 w10">拼團</span>
+            <div class="clearfix details-time fr w70 text-right" id="dao">
+                <span>距結束 </span>
+                <span class="time" id="day">999</span>
+                <span class="type">天</span>
+                <span class="time" id="hour">08</span>
+                <span class="type">時</span>
+                <span class="time" id="minutes">32</span>
+                <span class="type">分</span>
+                <span class="time" id="second">45</span>
+                <span class="type">秒</span>
+            </div>
+            <div class="dishide fr w70 text-right" id="daoend">活动已结束</div>
         </div>
-        <div class="swiper-slide">
-          <a href=" ">
-            <img src="img/product-details.png" alt="">
-          </a>
+    </div>
+    <div class="padding2 bg-fff margin-bot1 posrel">
+        <div class="details-h text-elli-2 font-size17 col333 font-weight6 margin-bottom w80"
+             style="height: 0.9rem;line-height: 0.45rem;">
+            香港9价HPV疫苗套餐【涞富健康】【周期0-2-6】【三针保障】
         </div>
-      </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
+        <!-- 分享圖片 -->
+        <a href="" class="proShare">
+            <img src="img/share.png" alt="">
+        </a>
+        <div class="font-size17 margin-bot1">
+            <span class="coldb3822 font-weight6">￥1200.00</span>
+            <span class="col868686 text-through">￥1500.00</span>
+        </div>
+        <div class="font-size13 col868686 padding-bottom">
+            <span class="margin-right padding-right">運費：免運費</span>
+            <span class="margin-left padding-left">銷量：2563</span>
+        </div>
     </div>
-    <div class="group-time clearfix">
-      <span class="fl font-size16 w10">拼團</span>
-      <div class="clearfix details-time fr w70 text-right" id="dao">
-        <span>距結束 </span>
-        <span class="time" id="day">999</span>
-        <span class="type">天</span>
-        <span class="time" id="hour">08</span>
-        <span class="type">時</span>
-        <span class="time" id="minutes">32</span>
-        <span class="type">分</span>
-        <span class="time" id="second">45</span>
-        <span class="type">秒</span>
-      </div>
-      <div class="dishide fr w70 text-right" id="daoend">活动已结束</div>
+    <div class="padding-left padding-right bg-fff margin-bot1">
+        <div id="getProductFrom" class="  clearfix set-cell border-none ">
+            <label class="weui-label">選擇 <span class="col808080">請選擇規格</span></label>
+            <div class="weui-cell__bd flex1 text-right">
+                <img src="img/more.png" class="user-more" alt="">
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="padding2 bg-fff margin-bot1 posrel">
-    <div class="details-h text-elli-2 font-size17 col333 font-weight6 margin-bottom w80"
-         style="height: 0.9rem;line-height: 0.45rem;">
-      香港9价HPV疫苗套餐【涞富健康】【周期0-2-6】【三针保障】
+    <div class="padding-left padding-right bg-fff margin-bot1">
+        <div class="clearfix set-cell border-none " id="ExplainShow">
+            <label class="weui-label">支付開團邀請1人參團，人數不足自動退款</label>
+            <div class="weui-cell__bd flex1 text-right">
+                <span class="col808080" style="vertical-align: -0.03rem;">玩法详情</span>
+                <img src="img/more.png" class="user-more" alt="">
+            </div>
+        </div>
     </div>
-    <!-- 分享圖片 -->
-    <a href="" class="proShare">
-      <img src="img/share.png" alt="">
-    </a>
-    <div class="font-size17 margin-bot1">
-      <span class="coldb3822 font-weight6">￥1200.00</span>
-      <span class="col868686 text-through">￥1500.00</span>
+    <div class="padding-left padding-right bg-fff margin-bot1">
+        <div class="clearfix set-cell border-none " id="introShow">
+            <label class="weui-label">
+                <img src="img/logo.png" class="proImg" alt="">
+                <span> 涞富健康</span>
+            </label>
+            <div class="weui-cell__bd flex1 text-right">
+                <img src="img/more.png" class="user-more" alt="">
+            </div>
+        </div>
     </div>
-    <div class="font-size13 col868686 padding-bottom">
-      <span class="margin-right padding-right">運費：免運費</span>
-      <span class="margin-left padding-left">銷量：2563</span>
+    <div class="ui-flex  productList bg-fff text-center">
+        <div class="flex1 act">
+            <a href="javascript:;">商品詳情</a>
+        </div>
+        <div class="flex1">
+            <a href="javascript:;">成交記錄</a>
+        </div>
+        <div class="flex1">
+            <a href="javascript:;">商品評價</a>
+        </div>
     </div>
-  </div>
-  <div class="padding-left padding-right bg-fff margin-bot1">
-    <div id="getProductFrom" class="  clearfix set-cell border-none ">
-      <label class="weui-label">選擇 <span class="col808080">請選擇規格</span></label>
-      <div class="weui-cell__bd flex1 text-right">
-        <img src="img/more.png" class="user-more" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="padding-left padding-right bg-fff margin-bot1">
-    <div class="clearfix set-cell border-none " id="ExplainShow">
-      <label class="weui-label">支付開團邀請1人參團，人數不足自動退款</label>
-      <div class="weui-cell__bd flex1 text-right">
-        <span class="col808080" style="vertical-align: -0.03rem;">玩法详情</span>
-        <img src="img/more.png" class="user-more" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="padding-left padding-right bg-fff margin-bot1">
-    <div class="clearfix set-cell border-none ">
-      <label class="weui-label">
-        <img src="img/logo.png" class="proImg" alt="">
-        <span> 涞富健康</span>
-      </label>
-      <div class="weui-cell__bd flex1 text-right">
-        <img src="img/more.png" class="user-more" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="ui-flex  productList bg-fff text-center">
-    <div class="flex1 act">
-      <a href="javascript:;">商品詳情</a>
-    </div>
-    <div class="flex1">
-      <a href="javascript:;">成交記錄</a>
-    </div>
-    <div class="flex1">
-      <a href="javascript:;">商品評價</a>
-    </div>
-  </div>
-  <div class="proTab padding-bottom   bg-fff">
-    <!-- 商品详情 -->
-    <div class="proTabCon  bg-fff">
-      <img src="img/prodead.png" alt="">
-      <img src="img/product-details.png" alt="">
-    </div>
+    <div class="proTab padding-bottom   bg-fff">
+        <!-- 商品详情 -->
+        <div class="proTabCon  bg-fff">
+            <img src="img/prodead.png" alt="">
+            <img src="img/product-details.png" alt="">
+        </div>
 
-    <!-- 成交记录 -->
-    <div style="display: none" class="proTabCon  bg-fff padding-top">
-      <div class="clearfix makeList">
-        <div class="makeListDiv font-weight6 ">買家</div>
-        <div class="makeListDiv font-weight6  ">成交時間</div>
-        <div class="makeListDiv font-weight6  ">數量</div>
-      </div>
-      <div class="" id="makeList">
-        <div class="clearfix makeList">
-          <div class="makeListDiv col808080 ">海蓝天</div>
-          <div class="makeListDiv col808080  ">2019.05.10</div>
-          <div class="makeListDiv col808080  ">1</div>
+        <!-- 成交记录 -->
+        <div style="display: none" class="proTabCon  bg-fff padding-top">
+            <div class="clearfix makeList">
+                <div class="makeListDiv font-weight6 ">買家</div>
+                <div class="makeListDiv font-weight6  ">成交時間</div>
+                <div class="makeListDiv font-weight6  ">數量</div>
+            </div>
+            <div class="" id="makeList">
+                <div class="clearfix makeList">
+                    <div class="makeListDiv col808080 ">海蓝天</div>
+                    <div class="makeListDiv col808080  ">2019.05.10</div>
+                    <div class="makeListDiv col808080  ">1</div>
+                </div>
+                <div class="clearfix makeList">
+                    <div class="makeListDiv col808080 ">海蓝天</div>
+                    <div class="makeListDiv col808080  ">2019.05.10</div>
+                    <div class="makeListDiv col808080  ">1</div>
+                </div>
+                <div class="clearfix makeList">
+                    <div class="makeListDiv col808080 ">海蓝天</div>
+                    <div class="makeListDiv col808080  ">2019.05.10</div>
+                    <div class="makeListDiv col808080  ">1</div>
+                </div>
+                <div class="clearfix makeList">
+                    <div class="makeListDiv col808080 ">海蓝天</div>
+                    <div class="makeListDiv col808080  ">2019.05.10</div>
+                    <div class="makeListDiv col808080  ">1</div>
+                </div>
+                <div class="clearfix makeList">
+                    <div class="makeListDiv col808080 ">海蓝天</div>
+                    <div class="makeListDiv col808080  ">2019.05.10</div>
+                    <div class="makeListDiv col808080  ">1</div>
+                </div>
+            </div>
         </div>
-        <div class="clearfix makeList">
-          <div class="makeListDiv col808080 ">海蓝天</div>
-          <div class="makeListDiv col808080  ">2019.05.10</div>
-          <div class="makeListDiv col808080  ">1</div>
-        </div>
-        <div class="clearfix makeList">
-          <div class="makeListDiv col808080 ">海蓝天</div>
-          <div class="makeListDiv col808080  ">2019.05.10</div>
-          <div class="makeListDiv col808080  ">1</div>
-        </div>
-        <div class="clearfix makeList">
-          <div class="makeListDiv col808080 ">海蓝天</div>
-          <div class="makeListDiv col808080  ">2019.05.10</div>
-          <div class="makeListDiv col808080  ">1</div>
-        </div>
-        <div class="clearfix makeList">
-          <div class="makeListDiv col808080 ">海蓝天</div>
-          <div class="makeListDiv col808080  ">2019.05.10</div>
-          <div class="makeListDiv col808080  ">1</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- 商品评价 -->
-    <div style="display: none" class="proTabCon bg-fff  ">
-      <div class="ui-flex padding2">
-        <div class="flex1"><a href="javascript:;" class="good-star-btn act">追評0</a></div>
-        <div class="flex1"><a href="javascript:;" class="good-star-btn">好評2</a></div>
-        <div class="flex1"><a href="javascript:;" class="good-star-btn">中評0</a></div>
-        <div class="flex1"><a href="javascript:;" class="good-star-btn">差評0</a></div>
-      </div>
-      <div class="" id="proStar">
-        <div class="pro-star-con">
-          <img src="img/Button_4.png" class="pro-portrait" alt="">
-          <div class="">
-            <h4>蝴蝶梦</h4>
-            <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
-            <div class="margin-bot1">
-              <span>好評</span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
+        <!-- 商品评价 -->
+        <div style="display: none" class="proTabCon bg-fff  ">
+            <div class="ui-flex padding2">
+                <div class="flex1"><a href="javascript:;" class="good-star-btn act">追評0</a></div>
+                <div class="flex1"><a href="javascript:;" class="good-star-btn">好評2</a></div>
+                <div class="flex1"><a href="javascript:;" class="good-star-btn">中評0</a></div>
+                <div class="flex1"><a href="javascript:;" class="good-star-btn">差評0</a></div>
             </div>
-            <div class="text-elli-2 margin-bot1 co747474">
-              环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+            <div class="" id="proStar">
+                <div class="pro-star-con">
+                    <img src="img/Button_4.png" class="pro-portrait" alt="">
+                    <div class="">
+                        <h4>蝴蝶梦</h4>
+                        <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                        <div class="margin-bot1">
+                            <span>好評</span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                        </div>
+                        <div class="text-elli-2 margin-bot1 co747474">
+                            环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                        </div>
+                        <div class="clearfix">
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-star-con">
+                    <img src="img/Button_4.png" class="pro-portrait" alt="">
+                    <div class="">
+                        <h4>蝴蝶梦</h4>
+                        <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                        <div class="margin-bot1">
+                            <span>好評</span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                        </div>
+                        <div class="text-elli-2 margin-bot1 co747474">
+                            环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                        </div>
+                        <div class="clearfix">
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-star-con">
+                    <img src="img/Button_4.png" class="pro-portrait" alt="">
+                    <div class="">
+                        <h4>蝴蝶梦</h4>
+                        <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
+                        <div class="margin-bot1">
+                            <span>好評</span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                            <span class="graded gradedRed"></span>
+                        </div>
+                        <div class="text-elli-2 margin-bot1 co747474">
+                            环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
+                        </div>
+                        <div class="clearfix">
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                            <div class="uploadingDiv fl">
+                                <img src="img/product-details.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="clearfix">
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="pro-star-con">
-          <img src="img/Button_4.png" class="pro-portrait" alt="">
-          <div class="">
-            <h4>蝴蝶梦</h4>
-            <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
-            <div class="margin-bot1">
-              <span>好評</span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-            </div>
-            <div class="text-elli-2 margin-bot1 co747474">
-              环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
-            </div>
-            <div class="clearfix">
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pro-star-con">
-          <img src="img/Button_4.png" class="pro-portrait" alt="">
-          <div class="">
-            <h4>蝴蝶梦</h4>
-            <p class="co747474 font-size12 margin-bot1">2019.05.10</p>
-            <div class="margin-bot1">
-              <span>好評</span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-              <span class="graded gradedRed"></span>
-            </div>
-            <div class="text-elli-2 margin-bot1 co747474">
-              环境很不错，医生服务态度好，打了一针还有两针了,真心推荐......
-            </div>
-            <div class="clearfix">
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-              <div class="uploadingDiv fl">
-                <img src="img/product-details.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 <!-- 底部购买按钮 -->
 <div class="de_btn_bar">
-  <div class="icon_btn">
-    <i class="fa fa-headphones  coldb3822"><img src="img/kefu.png" alt=""></i>
-    <span class="txt">客服</span>
-  </div>
-
-  <div class="btn_group">
-    <div class="ui-flex center ">
-      <div class="btn btn_orange bg-f8d559 colred" id="addCart2">
-        <p>￥1500</p>
-        <p>单独购买</p>
-
-      </div>
-      <div class="btn btn_buy bg-de3c22" id="buyBtn2">
-        <p>￥1500</p>
-        <p>拼团购买</p>
-
-      </div>
-
-      <div class="btn btn_buy bg-da618f colfff dandubtn" id="addPayOrder">
-        <p>拼团购买</p>
-      </div>
+    <div class="icon_btn">
+        <i class="fa fa-headphones  coldb3822"><img src="img/kefu.png" alt=""></i>
+        <span class="txt">客服</span>
     </div>
-  </div>
+
+    <div class="btn_group">
+        <div class="ui-flex center ">
+            <div class="btn btn_orange bg-f8d559 colred" id="addCart2">
+                <p>￥1500</p>
+                <p>单独购买</p>
+
+            </div>
+            <div class="btn btn_buy bg-de3c22" id="buyBtn2">
+                <p>￥1500</p>
+                <p>拼团购买</p>
+
+            </div>
+
+            <div class="btn btn_buy bg-da618f colfff dandubtn" id="addPayOrder">
+                <p>拼团购买</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="posfixed proFixedBg" id="productSelect">
-  <div class="proFormDetails">
-    <div class="proSpeciText posrel bg-fff">
-      <img src="img/prodead.png" class="proSpeciTextImg" alt="">
-      <div class="details-h text-elli-2 font-size16 col333 co747474    w90"
-           style="height: 0.9rem;line-height: 0.45rem;">
-        香港9价HPV疫苗套餐【涞富健康】【周期0-2-6】【三针保障】
-      </div>
-      <div class="font-size17 margin-bot1">
-        <span class="coldb3822 font-weight6">￥1200.00</span>
-      </div>
-      <p class="posabs order-list-nub font-size16  " id="hideModel" style="top: 0.2rem;">
-        <img src="img/shutdown.png" alt="">
-      </p>
+    <div class="proFormDetails">
+        <div class="proSpeciText posrel bg-fff">
+            <img src="img/prodead.png" class="proSpeciTextImg" alt="">
+            <div class="details-h text-elli-2 font-size16   col353535    w90"
+                 style="height: 0.9rem;line-height: 0.45rem;">
+                香港9价HPV疫苗套餐【涞富健康】【周期0-2-6】【三针保障】
+            </div>
+            <div class="font-size17 margin-bot1">
+                <span class="coldb3822 font-weight6">￥1200.00</span>
+            </div>
+            <p class="posabs order-list-nub font-size16  " id="hideModel" style="top: 0.2rem;">
+                <img src="img/shutdown.png" alt="">
+            </p>
+        </div>
+        <div class="proFixedCom">
+            <div class="margin-bottom">
+                <div class="font-size16 font-weight6 margin-bottom">預約時間</div>
+                <!-- 预约时间 -->
+                <input type="hidden" id="makeMonth" value="2019年15月" name="makeMonth">
+                <div class="clearfix makeMonthUl">
+                    <div class="makeMonthUlBtn act" data-Month="2019年15月">2019年15月</div>
+                    <div class="makeMonthUlBtn  " data-Month="2019年6月">2019年6月</div>
+                </div>
+                <div class="clearfix makeMonthUl">
+                    <div class="makeMonthUlBtn  " data-Month="2019年15月">2019年15月</div>
+                    <div class="makeMonthUlBtn  " data-Month="2019年6月">2019年6月</div>
+                </div>
+            </div>
+            <div class="margin-bottom">
+
+                <div class="font-size16 font-weight6 margin-bottom">可約日期</div>
+                <input type="hidden" id="makeDay" name="makeDay" value="1日">
+                <div class="clearfix makeDayUl">
+                    <div class="makeMonthUlBtn act" data-Day="1日">1日</div>
+                    <div class="makeMonthUlBtn  " data-Day="2日">2日</div>
+                    <div class="makeMonthUlBtn  disabledBtn" data-Day="1日">1日</div>
+                    <div class="makeMonthUlBtn  " data-Day="4日">4日</div>
+                    <div class="makeMonthUlBtn  " data-Day="5日">5日</div>
+                    <div class="makeMonthUlBtn  " data-Day="6日">6日</div>
+                    <div class="makeMonthUlBtn  " data-Day="7日">7日</div>
+                    <div class="makeMonthUlBtn  " data-Day="8日">8日</div>
+                    <div class="makeMonthUlBtn  " data-Day="9日">9日</div>
+                    <div class="makeMonthUlBtn  " data-Day="10日">10日</div>
+                    <div class="makeMonthUlBtn  " data-Day="11日">11日</div>
+                    <div class="makeMonthUlBtn  " data-Day="12日">12日</div>
+                    <div class="makeMonthUlBtn  " data-Day="13日">13日</div>
+                    <div class="makeMonthUlBtn  " data-Day="14日">14日</div>
+                    <div class="makeMonthUlBtn  " data-Day="15日">15日</div>
+                    <div class="makeMonthUlBtn  " data-Day="16日">16日</div>
+                    <div class="makeMonthUlBtn  " data-Day="17日">17日</div>
+                    <div class="makeMonthUlBtn  " data-Day="18日">18日</div>
+                    <div class="makeMonthUlBtn  " data-Day="19日">19日</div>
+                    <div class="makeMonthUlBtn  " data-Day="20日">20日</div>
+                    <div class="makeMonthUlBtn  " data-Day="21日">21日</div>
+                    <div class="makeMonthUlBtn  " data-Day="22日">22日</div>
+                    <div class="makeMonthUlBtn  " data-Day="23日">23日</div>
+                    <div class="makeMonthUlBtn  " data-Day="24日">24日</div>
+                    <div class="makeMonthUlBtn  " data-Day="25日">25日</div>
+                    <div class="makeMonthUlBtn  " data-Day="26日">26日</div>
+                    <div class="makeMonthUlBtn  " data-Day="27日">27日</div>
+                    <div class="makeMonthUlBtn  " data-Day="28日">28日</div>
+                    <div class="makeMonthUlBtn  " data-Day="29日">29日</div>
+                    <div class="makeMonthUlBtn  " data-Day="30日">30日</div>
+                    <div class="makeMonthUlBtn  " data-Day="31日">31日</div>
+                </div>
+            </div>
+            <div class="margin-bottom">
+                <div class="font-size16 font-weight6 margin-bottom clearfix">
+                    <span>購買數量</span>
+                    <div class="fr">
+                        <span class="addSubtract SubtractNubBtn" onclick="addSubtract(this,1)">—</span>
+                        <input type="text" class="addSubtractNubVal" id="addSubtractNubVal" value="1" name="nub">
+                        <span class="addSubtract addNubBtn" onclick="addSubtract(this,2)">+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-bottom">
+                <div class="font-size16 font-weight6 margin-bottom clearfix">
+                    <span>預約人信息 <span class="co747474 font-weight2">(必填)</span></span>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">姓名</span>
+                    <div class="fl w70">
+                        <input type="number" name="Name" id="Name" class="order-msg" placeholder="輸入真實姓名">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">手機號</span>
+                    <div class="fl w70">
+                        <input type="number" name="mobile" id="mobile" class="order-msg" placeholder="輸入手機號">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">身份證號</span>
+                    <div class="fl w70">
+                        <input type="number" name="IdNumber" id="IdNumber" class="order-msg" placeholder="请输入身份證號">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">出生日期</span>
+                    <div class="fl w70">
+                        <input type="text" data-options="{'type':'YYYY-MM-DD hh:mm','beginYear':1919,'endYear':2088}"
+                               name="birth" id="birth" class="order-msg" placeholder="請選擇年月日">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">打針時間</span>
+                    <div class="fl w70">
+                        <input type="text" data-options="{'type':'YYYY-MM-DD hh:mm','beginYear':2010,'endYear':2088}"
+                               name="injection" id="injection" class="order-msg" placeholder="請選擇預約打針時間">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">所在城市</span>
+                    <div class="fl w70">
+                        <input type="number" name="city" id="city" class="order-msg" placeholder="輸入城市名">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">護照號碼</span>
+                    <div class="fl w70">
+                        <input type="number" name="passport" id="passport" class="order-msg" placeholder="請輸入您的護照號碼">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix">
+                    <span class="order-list-name  ">護照英文名</span>
+                    <div class="fl w70">
+                        <input type="number" name="passportName" id="passportName" class="order-msg"
+                               placeholder="請輸入護照英文名">
+                    </div>
+                </div>
+            </div>
+            <div class="margin-bottom">
+
+                <div class="font-size16 font-weight6 margin-bottom clearfix">服務選擇</div>
+                <!-- 服務選擇 -->
+                <input type='hidden' name="service" value="0" id="serviceSelect">
+
+                <div class="addSiteList padding-top padding-bottom posrel clearfix   serviceSelectAct"
+                     onclick="serviceSelect(this,0)">
+                    <span>裸價服務（默認）</span>
+                    <div class="fr w50 text-right serviceRadio">
+                        <img src="img/ellipse.png" class="w10" alt="">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix  "
+                     onclick="serviceSelect(this,1)">
+                    <span>地陪服務（含專車接送）</span>
+                    <div class="fr w50 text-right serviceRadio">
+                        <img src="img/ellipse.png" class="w10" alt="">
+                    </div>
+                </div>
+                <div class="addSiteList padding-top padding-bottom posrel clearfix  "
+                     onclick="serviceSelect(this,2)">
+                    <span>專車接送</span>
+                    <div class="fr w50 text-right serviceRadio">
+                        <img src="img/ellipse.png" class="w10" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixedBtn productLinkPay" id="productLinkPay">確定</div>
     </div>
-    <div class="proFixedCom">
-      <div class="margin-bottom">
-        <div class="font-size16 font-weight6 margin-bottom">預約時間</div>
-        <!-- 预约时间 -->
-        <input type="hidden" id="makeMonth" value="2019年15月" name="makeMonth">
-        <div class="clearfix makeMonthUl">
-          <div class="makeMonthUlBtn act" data-Month="2019年15月">2019年15月</div>
-          <div class="makeMonthUlBtn  " data-Month="2019年6月">2019年6月</div>
-        </div>
-        <div class="clearfix makeMonthUl">
-          <div class="makeMonthUlBtn  " data-Month="2019年15月">2019年15月</div>
-          <div class="makeMonthUlBtn  " data-Month="2019年6月">2019年6月</div>
-        </div>
-      </div>
-      <div class="margin-bottom">
-
-        <div class="font-size16 font-weight6 margin-bottom">可約日期</div>
-        <input type="hidden" id="makeDay" name="makeDay" value="1日">
-        <div class="clearfix makeDayUl">
-          <div class="makeMonthUlBtn act" data-Day="1日">1日</div>
-          <div class="makeMonthUlBtn  " data-Day="2日">2日</div>
-          <div class="makeMonthUlBtn  disabledBtn" data-Day="1日">1日</div>
-          <div class="makeMonthUlBtn  " data-Day="4日">4日</div>
-          <div class="makeMonthUlBtn  " data-Day="5日">5日</div>
-          <div class="makeMonthUlBtn  " data-Day="6日">6日</div>
-          <div class="makeMonthUlBtn  " data-Day="7日">7日</div>
-          <div class="makeMonthUlBtn  " data-Day="8日">8日</div>
-          <div class="makeMonthUlBtn  " data-Day="9日">9日</div>
-          <div class="makeMonthUlBtn  " data-Day="10日">10日</div>
-          <div class="makeMonthUlBtn  " data-Day="11日">11日</div>
-          <div class="makeMonthUlBtn  " data-Day="12日">12日</div>
-          <div class="makeMonthUlBtn  " data-Day="13日">13日</div>
-          <div class="makeMonthUlBtn  " data-Day="14日">14日</div>
-          <div class="makeMonthUlBtn  " data-Day="15日">15日</div>
-          <div class="makeMonthUlBtn  " data-Day="16日">16日</div>
-          <div class="makeMonthUlBtn  " data-Day="17日">17日</div>
-          <div class="makeMonthUlBtn  " data-Day="18日">18日</div>
-          <div class="makeMonthUlBtn  " data-Day="19日">19日</div>
-          <div class="makeMonthUlBtn  " data-Day="20日">20日</div>
-          <div class="makeMonthUlBtn  " data-Day="21日">21日</div>
-          <div class="makeMonthUlBtn  " data-Day="22日">22日</div>
-          <div class="makeMonthUlBtn  " data-Day="23日">23日</div>
-          <div class="makeMonthUlBtn  " data-Day="24日">24日</div>
-          <div class="makeMonthUlBtn  " data-Day="25日">25日</div>
-          <div class="makeMonthUlBtn  " data-Day="26日">26日</div>
-          <div class="makeMonthUlBtn  " data-Day="27日">27日</div>
-          <div class="makeMonthUlBtn  " data-Day="28日">28日</div>
-          <div class="makeMonthUlBtn  " data-Day="29日">29日</div>
-          <div class="makeMonthUlBtn  " data-Day="30日">30日</div>
-          <div class="makeMonthUlBtn  " data-Day="31日">31日</div>
-        </div>
-      </div>
-      <div class="margin-bottom">
-        <div class="font-size16 font-weight6 margin-bottom clearfix">
-          <span>購買數量</span>
-          <div class="fr">
-            <span class="addSubtract SubtractNubBtn" onclick="addSubtract(this,1)">—</span>
-            <input type="text" class="addSubtractNubVal" id="addSubtractNubVal" value="1" name="nub">
-            <span class="addSubtract addNubBtn" onclick="addSubtract(this,2)">+</span>
-          </div>
-        </div>
-      </div>
-      <div class="margin-bottom">
-        <div class="font-size16 font-weight6 margin-bottom clearfix">
-          <span>預約人信息 <span class="co747474 font-weight2">(必填)</span></span>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">姓名</span>
-          <div class="fl w70">
-            <input type="number" name="Name" id="Name" class="order-msg" placeholder="輸入真實姓名">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">手機號</span>
-          <div class="fl w70">
-            <input type="number" name="mobile" id="mobile" class="order-msg" placeholder="輸入手機號">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">身份證號</span>
-          <div class="fl w70">
-            <input type="number" name="IdNumber" id="IdNumber" class="order-msg" placeholder="请输入身份證號">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">出生日期</span>
-          <div class="fl w70">
-            <input type="number" name="birth" id="birth" class="order-msg" placeholder="請選擇年月日">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">打針時間</span>
-          <div class="fl w70">
-            <input type="number" name="injection" id="injection" class="order-msg" placeholder="請選擇預約打針時間">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">所在城市</span>
-          <div class="fl w70">
-            <input type="number" name="city" id="city" class="order-msg" placeholder="輸入城市名">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">護照號碼</span>
-          <div class="fl w70">
-            <input type="number" name="passport" id="passport" class="order-msg" placeholder="請輸入您的護照號碼">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix">
-          <span class="order-list-name  ">護照英文名</span>
-          <div class="fl w70">
-            <input type="number" name="passportName" id="passportName" class="order-msg" placeholder="請輸入護照英文名">
-          </div>
-        </div>
-      </div>
-      <div class="margin-bottom">
-
-        <div class="font-size16 font-weight6 margin-bottom clearfix">服務選擇</div>
-        <!-- 服務選擇 -->
-        <input type='hidden' name="service" value="0" id="serviceSelect">
-
-        <div class="addSiteList padding-top padding-bottom posrel clearfix font-weight6 serviceSelectAct"
-             onclick="serviceSelect(this,0)">
-          <span>裸價服務（默認）</span>
-          <div class="fr w50 text-right serviceRadio">
-            <img src="img/ellipse.png" class="w10" alt="">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix font-weight6"
-             onclick="serviceSelect(this,1)">
-          <span>地陪服務（含專車接送）</span>
-          <div class="fr w50 text-right serviceRadio">
-            <img src="img/ellipse.png" class="w10" alt="">
-          </div>
-        </div>
-        <div class="addSiteList padding-top padding-bottom posrel clearfix font-weight6"
-             onclick="serviceSelect(this,2)">
-          <span>專車接送</span>
-          <div class="fr w50 text-right serviceRadio">
-            <img src="img/ellipse.png" class="w10" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="fixedBtn productLinkPay" id="productLinkPay">確定</div>
-  </div>
 </div>
 <div class="posfixed proFixedBg" id="productExplain"  >
-  <div class="productExplainAbs">
-    <div class="  clearfix set-cell">
-      <label class="weui-label">拼團玩法</label>
-      <div class="weui-cell__bd flex1 text-right">
-        <img src="img/shutdown.png" class="couponImgHide" style="width: 0.3rem" alt="">
-      </div>
-    </div>
-    <div class="productExplainText">
+    <div class="productExplainAbs">
+        <div class="  clearfix set-cell">
+            <label class="weui-label">拼團玩法</label>
+            <div class="weui-cell__bd flex1 text-right">
+                <img src="img/shutdown.png" class="couponImgHide" style="width: 0.3rem" alt="">
+            </div>
+        </div>
+        <div class="productExplainText">
 
-      <div class="font-size16 font-weight6 margin-bottom">拼團玩法說明</div>
-      <div class="ExplainTextMsg">
-        <p>拼團玩法說明拼團玩法說明拼團玩法說明拼團玩法說明拼團玩法說明拼團玩法說明拼團玩法說明拼團玩法說明</p>
-      </div>
+            <div class="ExplainTextMsg">
+                <div class="margin-bottom padding-top">
+                    <div class="font-size16 font-weight6  ">什麽是多人拼團？</div>
+                    <p>多人拼團（以下簡稱：拼團）是指由多人壹起拼單購買的團購活動，通過拼團買家可以享受比壹般網購更低的折扣。</p>
+                </div>
+                <div class="margin-bottom padding-top">
+                    <div class="font-size16 font-weight6  ">怎樣算拼團成功？</div>
+                    <p>在拼團有效期內找到滿足人數的好友參加拼團，即可算拼團成功。</p>
+                </div>
+                <div class="margin-bottom padding-top">
+                    <div class="font-size16 font-weight6  ">拼團失敗，怎樣退款？</div>
+                    <p>若拼團有效期內沒有湊齊人數，即算作拼團失敗。系統會自動將所支付的貨款原路退回，具體到賬時間以各銀行為準。</p>
+                </div>
+                <div class="margin-bottom padding-top">
+                    <div class="font-size16 font-weight6  ">拼團流程</div>
+                    <img src="img/game.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+<div class="posfixed proFixedBg" id="introHide"  >
+    <div class="productExplainAbs">
+        <div class="  clearfix set-cell">
+            <label class="weui-label">公司介紹</label>
+            <div class="weui-cell__bd flex1 text-right">
+                <img src="img/shutdown.png" class="couponImgHide" style="width: 0.3rem" alt="">
+            </div>
+        </div>
+        <div class="productExplainText">
+
+            <div class="ExplainTextMsg">
+                <div class="margin-bottom padding-top">
+
+                    <p>涞富健康扎根香港，是该地区权威医疗机构直接合作的资讯服务平台。专注于国内用户提供优质的海外医疗服务，包括疫苗接种、精密体检等多项服务。秉持着“优质医疗，贴心服务”的理念，致力于为用户提供更优质、更便捷、性价比更高的海外医疗健康服务。</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.date.js"></script>
 <script>
 
-  $(function () {
-    $("body,html").css("background", "#f3f4f5");
+    $(function () {
+        $("body,html").css("background", "#f3f4f5");
+        $.date('#birth');
+        $.date('#injection');
+        var swiper = new Swiper('.swiper-container', {
+            centeredSlides: true,
+            loop: true,
+            autoplay: true,
+            speed: 1000,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'fraction',
+            },
+        });
 
-    var swiper = new Swiper('.swiper-container', {
-      centeredSlides: true,
-      loop: true,
-      autoplay: true,
-      speed: 1000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'fraction',
-      },
+        $(".productList .flex1").click(function () {
+            $(this).addClass("act").siblings(".flex1").removeClass("act");
+            $(".proTab  .proTabCon").eq($(this).index()).show().siblings(".proTabCon").hide();
+        });
+
+
+    })
+
+
+    //倒计时
+    var timer_rt = window.setInterval("GetRTime()", 1000);
+    //倒计时
+    var startTime = new Date();
+    startTime.setFullYear(2019, 6, 15);
+    startTime.setHours(23);
+    startTime.setMinutes(59);
+    startTime.setSeconds(59);
+    startTime.setMilliseconds(999);
+    var EndTime = startTime.getTime();
+
+    function GetRTime() {
+        var NowTime = new Date();
+        var nMS = EndTime - NowTime.getTime();
+        var nD = Math.floor(nMS / (1000 * 60 * 60 * 24));
+        var nH = Math.floor(nMS / (1000 * 60 * 60)) % 24;
+        var nM = Math.floor(nMS / (1000 * 60)) % 60;
+        var nS = Math.floor(nMS / 1000) % 60;
+        if (nMS < 0) {
+            $("#dao").hide();
+            $("#daoend").show();
+        } else {
+            $("#dao").show();
+            $("#daoend").hide();
+            $("#day").text(nD);
+            $("#hour").text(nH);
+            $("#minutes").text(nM);
+            $("#second").text(nS);
+        }
+    }
+
+
+    /*显示隐藏彈窗*/
+    $("#getProductFrom,#addCart2,#buyBtn2,#addPayOrder").click(function () {
+        $("#productSelect").show();
+        $("body,html").addClass("bodyOver");
+
+        var hei = $(window).height();
+        var content = $('.proFormDetails').height();
+        var contentWithPadding = $('.proFormDetails').innerHeight();
+        var proSpeciText = $('.proSpeciText').innerHeight();
+        $(".proFixedCom").css("height", (hei - (contentWithPadding - content) - proSpeciText - 50) + "px")
+    })
+
+    $("#hideModel").click(function () {
+        $("#productSelect").hide();
+        $("body,html").removeClass("bodyOver");
+    })
+
+    /*月份选择*/
+    $(".makeMonthUl .makeMonthUlBtn").click(function () {
+        $(".makeMonthUlBtn").removeClass("act");
+        $(this).addClass("act");
+        $("#makeMonth").val($(this).attr("data-month"));
+    });
+    /*日选择*/
+    $(".makeDayUl .makeMonthUlBtn").click(function () {
+        if ($(this).hasClass("disabledBtn")) {
+            layer.open({
+                content: '預約已滿，請更換其他的日期'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        $(this).addClass("act").siblings(".makeMonthUlBtn").removeClass("act");
+        $("#makeDay").val($(this).attr("data-day"));
     });
 
-    $(".productList .flex1").click(function () {
-      $(this).addClass("act").siblings(".flex1").removeClass("act");
-      $(".proTab  .proTabCon").eq($(this).index()).show().siblings(".proTabCon").hide();
-    });
-
-
-  })
-
-
-  //倒计时
-  var timer_rt = window.setInterval("GetRTime()", 1000);
-  //倒计时
-  var startTime = new Date();
-  startTime.setFullYear(2019, 6, 15);
-  startTime.setHours(23);
-  startTime.setMinutes(59);
-  startTime.setSeconds(59);
-  startTime.setMilliseconds(999);
-  var EndTime = startTime.getTime();
-
-  function GetRTime() {
-    var NowTime = new Date();
-    var nMS = EndTime - NowTime.getTime();
-    var nD = Math.floor(nMS / (1000 * 60 * 60 * 24));
-    var nH = Math.floor(nMS / (1000 * 60 * 60)) % 24;
-    var nM = Math.floor(nMS / (1000 * 60)) % 60;
-    var nS = Math.floor(nMS / 1000) % 60;
-    if (nMS < 0) {
-      $("#dao").hide();
-      $("#daoend").show();
-    } else {
-      $("#dao").show();
-      $("#daoend").hide();
-      $("#day").text(nD);
-      $("#hour").text(nH);
-      $("#minutes").text(nM);
-      $("#second").text(nS);
+    /*数量加减*/
+    function addSubtract(that, nub) {
+        var nubVal = $("#addSubtractNubVal").val();
+        nub == "1" ? nubVal <= 1 ? nubVal : nubVal-- : nubVal++;
+        $("#addSubtractNubVal").val(nubVal);
     }
-  }
+
+    /*服務選擇*/
+    function serviceSelect(that, nub) {
+        $(that).addClass("serviceSelectAct").siblings(".addSiteList").removeClass("serviceSelectAct");
+        $("#serviceSelect").val(nub);
+    }
+
+    $("#productLinkPay").click(function () {
+        var Names = $("#Name").val();//姓名
+        var mobile = $("#mobile").val();//手機號
+        var IdNumber = $("#IdNumber").val();//身份證號
+        var birth = $("#birth").val();//出生日期
+        var injection = $("#injection").val();//打針時間
+        var city = $("#city").val();//所在城市
+        var passport = $("#passport").val();//護照號碼
+        var passportName = $("#passportName").val();//護照英文名
+        if (Names == "") {
+            layer.open({
+                content: '請輸入姓名'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (mobile == "") {
+            layer.open({
+                content: '請輸入手機號'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (IdNumber == "") {
+            layer.open({
+                content: '請輸入身份證號'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (birth == "") {
+            layer.open({
+                content: '請選擇出生日期'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (injection == "") {
+            layer.open({
+                content: '請輸入打針時間'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (city == "") {
+            layer.open({
+                content: '請選擇所在城市'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (passport == "") {
+            layer.open({
+                content: '請輸入護照號碼'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+        if (passportName == "") {
+            layer.open({
+                content: '請輸入護照英文名'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+            return false;
+        }
+    })
 
 
-  /*显示隐藏彈窗*/
-  $("#getProductFrom,#addCart2,#buyBtn2,#addPayOrder").click(function () {
-    $("#productSelect").show();
-    $("body,html").addClass("bodyOver");
+    /*拼團顯示隱藏*/
+    $(".couponImgHide").click(function () {
+        $("#productExplain,#introHide").hide();
+        $("body,html").removeClass("bodyOver");
+    })
+    $("#ExplainShow").click(function () {
+        $("#productExplain").show();
+        $("body,html").addClass("bodyOver");
+    })
 
-    var hei = $(window).height();
-    var content = $('.proFormDetails').height();
-    var contentWithPadding = $('.proFormDetails').innerHeight();
-    var proSpeciText = $('.proSpeciText').innerHeight();
-    $(".proFixedCom").css("height", (hei - (contentWithPadding - content) - proSpeciText - 50) + "px")
-  })
-
-  $("#hideModel").click(function () {
-    $("#productSelect").hide();
-    $("body,html").removeClass("bodyOver");
-  })
-
-  /*月份选择*/
-  $(".makeMonthUl .makeMonthUlBtn").click(function () {
-    $(".makeMonthUlBtn").removeClass("act");
-    $(this).addClass("act");
-    $("#makeMonth").val($(this).attr("data-month"));
-  });
-  /*日选择*/
-  $(".makeDayUl .makeMonthUlBtn").click(function () {
-    if($(this).hasClass("disabledBtn")){
-      layer.open({
-        content: '預約已滿，請更換其他的日期'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    $(this).addClass("act").siblings(".makeMonthUlBtn").removeClass("act");
-    $("#makeDay").val($(this).attr("data-day"));
-  });
-
-  /*数量加减*/
-  function addSubtract(that, nub) {
-    var nubVal = $("#addSubtractNubVal").val();
-    nub == "1" ? nubVal <= 1 ? nubVal : nubVal-- : nubVal++;
-    $("#addSubtractNubVal").val(nubVal);
-  }
-
-  /*服務選擇*/
-  function serviceSelect(that, nub) {
-    $(that).addClass("serviceSelectAct").siblings(".addSiteList").removeClass("serviceSelectAct");
-    $("#serviceSelect").val(nub);
-  }
-  $("#productLinkPay").click(function () {
-    var Names=$("#Name").val();//姓名
-    var mobile=$("#mobile").val();//手機號
-    var IdNumber=$("#IdNumber").val();//身份證號
-    var birth=$("#birth").val();//出生日期
-    var injection=$("#injection").val();//打針時間
-    var city=$("#city").val();//所在城市
-    var passport=$("#passport").val();//護照號碼
-    var passportName=$("#passportName").val();//護照英文名
-    if(Names==""){
-      layer.open({
-        content: '請輸入姓名'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(mobile==""){
-      layer.open({
-        content: '請輸入手機號'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(IdNumber==""){
-      layer.open({
-        content: '請輸入身份證號'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(birth==""){
-      layer.open({
-        content: '請選擇出生日期'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(injection==""){
-      layer.open({
-        content: '請輸入打針時間'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(city==""){
-      layer.open({
-        content: '請選擇所在城市'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(passport==""){
-      layer.open({
-        content: '請輸入護照號碼'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-    if(passportName==""){
-      layer.open({
-        content: '請輸入護照英文名'
-        , skin: 'msg'
-        , time: 2 //2秒后自动关闭
-      });
-      return false;
-    }
-  })
-
-
-  /*拼團顯示隱藏*/
-  $(".couponImgHide").click(function () {
-    $("#productExplain").hide();
-    $("body,html").removeClass("bodyOver");
-  })
-  $("#ExplainShow").click(function () {
-    $("#productExplain").show();
-    $("body,html").addClass("bodyOver");
-  })
+    $("#introShow").click(function () {
+        $("#introHide").show();
+        $("body,html").addClass("bodyOver");
+    })
 </script>
 </body>
 </html>

@@ -52,7 +52,7 @@
         <div class="orderGrade">商品評分</div>
       </div>
       <div class="padding-left padding-top margin-top">
-        <span style="vertical-align: top">描述相符</span>
+        <span id="starNub" style="vertical-align: top">好评</span>
         <span class="graded gradedRed"></span>
         <span class="graded gradedRed"></span>
         <span class="graded gradedRed"></span>
@@ -61,14 +61,17 @@
         <input type="hidden" name="gradedVal" id="gradedVal" value="5">
       </div>
     </div>
-    <button type="submit" class="tBtn formBtn">提交評價</button>
+    <div class="padding2">
+      <button type="submit" class="tBtn formBtn">提交評價</button>
+    </div>
+
   </form>
 </div>
 <script>
   $(function () {
     $(".graded").click(function () {
-        var graded=$(".graded"),index=$(this).index();
-        $("#gradedVal").val(index)
+        var graded=$(".graded"),index=$(this).index(),starIndex=$("#starNub");
+        $("#gradedVal").val(index);
         for(var i=1;i<graded.length;i++){
           if(i>(index-1)){
               $(graded[i]).removeClass("gradedRed")
@@ -76,6 +79,8 @@
             $(graded[i]).addClass("gradedRed")
           }
         }
+
+        index==1?starIndex.text("差评"):(index>=2&&index<=3)?starIndex.text("中评"):starIndex.text("好评")
     })
 
 

@@ -34,7 +34,7 @@ body {
     font-family: "microsoft yahei";
     color: #333333;
     position: relative;
-    font-size: 14px!important;
+    font-size: 0.23rem!important;
     max-width: 7.5rem;
     margin: 0 auto;
 }
@@ -90,6 +90,18 @@ button,textarea {
     outline: none;
     font-family: "microsoft yahei";
 }
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ccc;
+}
 .textCen {
     text-align: center;
 }
@@ -140,7 +152,7 @@ button,textarea {
     width: 60%;
     height: 0.65rem;
     line-height: 0.65rem;
-    font-size: 14px;
+    font-size: 0.23rem;
 }
 .form-yzm{
     width: 30%;
@@ -151,7 +163,7 @@ button,textarea {
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 14px;
+    font-size: 0.23rem;
 }
 .formBtn{
     height: 0.88rem;
@@ -160,7 +172,7 @@ button,textarea {
     padding: 0;
     background: #eb5790;
     color: #fff;
-    font-size: 16px;
+    font-size: 0.25rem;
     margin-top: 0.4rem;
 }
 .home-com{
@@ -169,7 +181,11 @@ button,textarea {
 }
 .home-com .swiper-container{
     border-radius: 8px;
-    max-height: 2.63rem;
+    max-height: 2.76rem;
+}
+.home-com .swiper-container .swiper-wrapper .swiper-slide  img{
+    max-width: 100%;
+    max-height: 2.76rem;
 }
 .home-com .swiper-container .swiper-pagination .swiper-pagination-bullet{
     background: #f7eef7;
@@ -194,14 +210,14 @@ button,textarea {
 .home-nav .home-nav-link img{
     display: block;
     width: 60%;
-    margin:  0 auto 5px;
+    margin:  0 auto 8px;
 }
 .home-title{
     text-align: center;
     padding:  0.3rem 0;
     font-weight: bold;
     color: #333;
-    font-size: 16px;
+    font-size: 0.25rem;
 }
 .home-title img{
     width: 0.2rem;
@@ -429,7 +445,7 @@ button,textarea {
 }
 .orderkong{
   text-align: center;
-  padding:2.6rem 0;
+  padding:2.6rem 0 0;
 }
 .orderkong>img{
   width: 1.6rem;
@@ -517,7 +533,7 @@ button,textarea {
   height: 2.0rem;
   color: #fff;
   text-align: center;
-  font-size: 16px;
+  font-size: 0.25rem;
 }
 .discountPriceNub{
   font-size: 40px;
@@ -793,7 +809,7 @@ button,textarea {
     text-align: center;
     background: #e4393c;
     color: #fff;
-    font-size: 14px;
+    font-size: 0.23rem;
     cursor: pointer;
     -webkit-user-select: none;
     display: block;
@@ -844,7 +860,7 @@ button,textarea {
   height: 0.6rem;
   line-height: 0.6rem;
   text-align: center;
-  font-size: 0.3rem;
+  font-size: 0.23rem;
   border: 1px solid #b2b2b2;
   border-radius: 3px;
   margin: 0 0.23rem 0.2rem 0;
@@ -897,7 +913,7 @@ button,textarea {
 }
 .addSiteList .order-list-name {
   display: inline-block;
-  width: 26%;
+  width: 24%;
   float: left;
   height: 25px;
   line-height: 25px;
@@ -907,7 +923,7 @@ button,textarea {
   resize: none;
   /* vertical-align: middle; */
   width: 75%;
-  font-size: 16px;
+  font-size: 0.25rem;
   height: 25px;
 }
 .productLinkPay{
@@ -916,14 +932,14 @@ button,textarea {
   text-align: center;
   background: #eb5790;
   color: #fff;
-  font-size: 16px;
+  font-size: 0.25rem;
   z-index: 9;
 }
 .serviceRadio{display: none}
 .serviceSelectAct .serviceRadio{
   display: block;
 }
-.serviceSelectAct .serviceRadio>img{vertical-align: top}
+.serviceSelectAct .serviceRadio>img{vertical-align: top;width: 0.3rem}
 .payImg{
   width: 0.6rem;
   vertical-align: middle;
@@ -990,7 +1006,7 @@ button,textarea {
   line-height: 50px;
   border: #949494 1px solid;
   border-radius: 25px;
-  font-size: 16px;
+  font-size: 0.25rem;
 }
 .payBtnRed{
   color: #eb5790;
@@ -1009,8 +1025,19 @@ button,textarea {
   text-indent: 2em;
   line-height: 0.4rem;
   font-size: 12px;
-
+    max-height: 10rem;
+    overflow-y: scroll;
 }
+.cusFixed{
+    bottom: 50px !important;
+}
+
+
+
+
+
+
+
 
 
 
