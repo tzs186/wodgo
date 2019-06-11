@@ -317,13 +317,13 @@
         //滚动条到底部的条件
         if(scrollTop+windowHeight==scrollHeight&&that.off){
           //写后台加载数据的函数
-          that.onRefresh();
+          //that.onRefresh();
         }
       }
 
     },
     mounted() {
-      // this.onRefresh()
+      this.onRefresh()
     },
     methods: {
       onRefresh(mun) { //刷新回调
@@ -380,7 +380,6 @@
       },
 
     },
-
     components: {
       banner,
       newProduct,
@@ -442,33 +441,5 @@
       }
     }
   }
-  .class-con-list{
-    width: 49%;
-    padding: 5px 10px;
-    margin-bottom: 2%;
-    float: left;
-    overflow: hidden;
-    background: #fff;
 
-  }
-  .class-con-list:nth-child(2n){
-    float: right;
-  }
-  .classImg{
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 0.1rem;
-  }
-  .classImg >img,.goodsIm>img{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .class-con-list a h5{
-    height: 70px;
-    line-height: 35px;
-  }
-  .class_price{
-    margin: 5px 0;
-    position: relative;
-  }
 </style>

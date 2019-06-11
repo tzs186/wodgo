@@ -97,13 +97,10 @@
           }, 1000);
           return false;
         }
-        /*this.$refs.dialog.confirm().then(() => {
-          this.showDialog = false;
-          console.log("sad")
-        }).catch(() => {
-          this.showDialog = false;
-          console.log("asdsdsad")
-        })*/
+        window.sessionStorage.setItem("token","tokenVal");
+        console.log(this.$route.query)
+        this.$router.push({path: this.$route.query.redirect})
+
       }
     },
     components: {
