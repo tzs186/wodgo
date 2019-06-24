@@ -70,7 +70,7 @@
               :get-scroll-top="getTop">
         <div slot="scrollList" class="clearfix">
           <div class="class-con-list" v-for="(item,index) in listdata ">
-            <a href="goods.php?ID=16791">
+            <router-link :to="'/goods?ID='+item.ID">
               <div class="classImg ui-flex justify-center center">
                 <img :src="'http://www.wodgo.com/'+item.smallimg" alt="">
               </div>
@@ -82,7 +82,7 @@
                 <span class="badge">{{item.type}}</span>
               </div>
               <p class="font-size12 col808080">已售{{item.nub}}件</p>
-            </a>
+            </router-link>
           </div>
         </div>
       </scroll>
