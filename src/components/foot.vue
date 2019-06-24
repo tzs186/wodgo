@@ -8,7 +8,7 @@
       <img src="../assets/img/footer_3.png" class="footer-img" alt="">
       <p>分类</p>
     </router-link>
-    <router-link class="footer-col" :to="{path: 'item', query: 1}">
+    <router-link class="footer-col" to="/">
       <img src="../assets/img/Invite_1.png" class="footer-imgInvite" alt="">
     </router-link>
     <router-link class="footer-col" to="/cart">

@@ -1,7 +1,7 @@
 <template>
   <div class="clearfix">
     <div class="homeNew fl" v-for="(item,index) in newProduct">
-      <a href="goods.php">
+      <router-link to="/goods">
         <div class="homeNewImg ui-flex justify-center center">
           <img :src="item.smallimg" alt="">
         </div>
@@ -10,7 +10,7 @@
         <div class="class_price margin-none">
           <span class="badge">{{item.type}}</span>
         </div>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

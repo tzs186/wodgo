@@ -34,6 +34,16 @@ export default new Router({
       component: () => import('@/views/classify/classify')
     },
     {
+      path: '/classes',
+      name: 'classes',
+      component: () => import('@/views/classify/classes')
+    },
+    {
+      path: '/goods',
+      name: 'goods',
+      component: () => import('@/views/classify/goods')
+    },
+    {
       path: '/cart',
       name: 'cart',
       meta:{

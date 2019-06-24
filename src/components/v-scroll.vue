@@ -145,7 +145,6 @@
         }
       },
       onScroll(e){
-        console.log("sad")
         let listHeight = this.myScrollList.offsetHeight //列表总高度
         let listScrollTop = e.target.scrollTop + this.myScroll.offsetHeight //当前滚动条位置
 
