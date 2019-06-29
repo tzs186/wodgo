@@ -98,7 +98,6 @@
           return false;
         }
         window.sessionStorage.setItem("token","tokenVal");
-        console.log(this.$route.query)
         this.$router.push({path: this.$route.query.redirect})
 
       }

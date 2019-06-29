@@ -133,7 +133,6 @@
 <script>
   import vFooters from "@/components/foot"
   export default {
-
     name: "user",
     data(){
       return{
@@ -141,7 +140,6 @@
           backgroundImage: "url(" + require("../../assets/img/user_bg.jpg") + ")",
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
-
         }
       }
     },

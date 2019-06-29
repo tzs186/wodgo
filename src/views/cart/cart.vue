@@ -4,7 +4,7 @@
       <div class="cart-top">
         <div class="cart-top-text fl w20"></div>
         <div class="cart-top-name fl w60">购物车</div>
-        <div class="cart-top-text fl w20"><span class="font-size13 col808080 disblock" id="editCart">编辑</span></div>
+        <div class="cart-top-text fl w20"><span class="font-size13 col808080 disblock" @click="removeCart=!removeCart" id="editCart">编辑</span></div>
       </div>
       <!-- 购物车为空时 -->
       <div class="emptyCart text-center ">
@@ -137,8 +137,8 @@
         </div>
         <div class="btn_group">
           <div class="ui-flex">
-            <div class="btn btn_buy bg-de3c22" id="buyBtn2">立即购买</div>
-            <div class="btn btn_buy bg-de3c22" style="display: none" id="removeCart">删除</div>
+            <div class="btn btn_buy bg-de3c22" v-show="!removeCart" id="buyBtn2">立即购买</div>
+            <div class="btn btn_buy bg-de3c22" v-show="removeCart"  id="removeCart">删除</div>
           </div>
         </div>
       </div>
@@ -154,6 +154,7 @@
     name: "cart",
     data() {
       return {
+        removeCart:false,
         allChecked: false,
         totalPrice: 0,
         totalScoreNub: 0,
@@ -187,17 +188,27 @@
     methods: {
       allCheckeds(){
         var that=this;
+        if(!that.allChecked){
+          that.shoppingList.forEach(function(val,index){
+            val.sonChecked=true;
+          })
+        }else{
+          that.shoppingList.forEach(function(val,index){
+            val.sonChecked=false;
+          })
+        }
+        that.total();
         that.allChecked = !that.allChecked;
-        that.shoppingList.forEach(function(val,index){
-            val.sonChecked=!val.sonChecked;
-            that.total();
-        })
       },
       sonChecked(index) {
         let that = this;
         let list = this.shoppingList;
         list[index].sonChecked = !list[index].sonChecked;
-
+        if (this.shoppingList.every(item => item.sonChecked === false)) {
+          this.allChecked = false
+        } else {
+          this.allChecked = true
+        }
         setTimeout(function(){
           that.total();
         },500)

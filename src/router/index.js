@@ -57,7 +57,17 @@ export default new Router({
       meta:{
         keepAlive:true
       },
-      component: () => import('@/views/user/user')
+      component: () => import('@/views/user/user'),
+      children:[
+        {
+          path: '/user/ad',
+          name: 'ad',
+          meta:{
+            keepAlive:true
+          },
+          component: () => import('@/views/user/ad')
+        },
+      ]
     },
   ]
 })
